@@ -3,20 +3,23 @@ import {
 } from "../actions/session_actions";
 
 const noUser = {
-    id: null
+  id: null
 };
 
 const sessionReducer = (state = noUser, action) => {
-    Object.freeze(state);
-    let nextState = Object.assign({}, state);
-    switch (action.type) {
-      case RECEIVE_CURRENT_USER:
-        return { id: action.current_user.id };
-      case LOGOUT_CURRENT_USER:
-        return noUser;
-      default:
-        return state;
-    }
-}
+
+  debugger
+  Object.freeze(state);
+  let nextState = Object.assign({}, state);
+  switch (action.type) {
+    case RECEIVE_CURRENT_USER:
+      return { id: action.user.id };
+    case LOGOUT_CURRENT_USER:
+      return noUser;
+    default:
+      return state;
+  };
+  
+};
 
 export default sessionReducer;
