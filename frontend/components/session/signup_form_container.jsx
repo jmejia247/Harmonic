@@ -12,7 +12,11 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps) => {
     return {
-        processForm: user => dispatch(signup(user))
+      processForm: (user) => dispatch(signup(user)),
+      closeModal: () => dispatch(closeModal()),
+      otherForm: (
+        <button onClick={() => dispatch(openModal("login"))}>Login</button>
+      ),
     };
 };
 

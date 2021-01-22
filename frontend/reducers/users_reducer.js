@@ -1,7 +1,7 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions'
 
 const userReducer = (state = {}, action) => {
-    debugger
+    // debugger
     Object.freeze(state);
     let nextState = Object.assign({}, state);
     switch (action.type) {

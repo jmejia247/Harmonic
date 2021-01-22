@@ -8,7 +8,7 @@ const noUser = {
 
 const sessionReducer = (state = noUser, action) => {
 
-  debugger
+  // debugger
   Object.freeze(state);
   let nextState = Object.assign({}, state);
   switch (action.type) {
