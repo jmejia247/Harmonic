@@ -5,8 +5,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          'id': <%= current_user.id %>,
+          'email': '<%= current_user.email %>'
+        };
+      </script>
+    <% end %>
+
+
   </head>
 
   <body>
