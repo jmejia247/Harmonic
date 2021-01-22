@@ -125,6 +125,10 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: coral;
+  border-radius: 3px;
+  padding: 5px 5px;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
 }
 
 
