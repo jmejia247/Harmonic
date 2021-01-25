@@ -152,4 +152,11 @@ table {
     width: 100%;
 }
 
+.modal-heading {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    text-decoration: none;
+}
+
 

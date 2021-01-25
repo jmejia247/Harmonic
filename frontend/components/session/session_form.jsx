@@ -45,7 +45,10 @@ class SessionForm extends React.Component {
         const { errors } = this.props;
         return (
           <form onSubmit={this.handleSubmit}>
-            <h1>{this.props.formType}</h1>
+            <section className='modal-heading'>
+              <h1>{this.props.formType}</h1>
+              {this.props.otherForm}
+            </section>
             <br />
               {this.renderErrors()}
             <br />
