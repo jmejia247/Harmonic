@@ -39,38 +39,40 @@ class SessionForm extends React.Component {
     render() {
         const { errors } = this.props;
         return (
-          <form onSubmit={this.handleSubmit}>
+          <div>
             <section className='modal-heading'>
-              <h1>{this.props.formType}</h1>
+              <h1 className='current-form'>{this.props.formType}</h1>
               {this.props.otherForm}
             </section>
-            <section className="modal-body">
-              <br />
-                {this.renderErrors()}
-              <br />
-              <label>
-                Email:
-                <input
-                  className='email'
-                  type="text"
-                  value={this.state.email}
-                  onChange={this.update("email")}
-                />
-              </label>
-              <br />
-              <label>
-                Password:
-                <input
-                  className='password'
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update("password")}
-                />
-              </label>
-              <br />
-              <input className="session-button" type="submit" value={this.props.formType} />
-            </section>
-          </form>
+            <form onSubmit={this.handleSubmit}>
+              <section className="modal-body">
+                <br />
+                  {this.renderErrors()}
+                <br />
+                <label>
+                  Email:
+                  <input
+                    className='email'
+                    type="text"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                  />
+                </label>
+                <br />
+                <label>
+                  Password:
+                  <input
+                    className='password'
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                  />
+                </label>
+                <br />
+                <input className="session-button" type="submit" value={this.props.formType} />
+              </section>
+            </form>
+          </div>
         );
     };
 }
