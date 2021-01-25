@@ -49,28 +49,32 @@ class SessionForm extends React.Component {
               <h1>{this.props.formType}</h1>
               {this.props.otherForm}
             </section>
-            <br />
-              {this.renderErrors()}
-            <br />
-            <label>
-              Email:
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-              />
-            </label>
-            <br />
-            <label>
-              Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-              />
-            </label>
-            <br />
-            <input type="submit" value={this.props.formType} />
+            <section className="modal-body">
+              <br />
+                {this.renderErrors()}
+              <br />
+              <label>
+                Email:
+                <input
+                  className='email'
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                />
+              </label>
+              <br />
+              <label>
+                Password:
+                <input
+                  className='password'
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                />
+              </label>
+              <br />
+              <input className="session-button" type="submit" value={this.props.formType} />
+            </section>
           </form>
         );
     };
