@@ -4,7 +4,6 @@ import {
 } from "../actions/session_actions";
 
 const sessionErrorsReducer = (state = [], action) => {
-  debugger
     Object.freeze(state);
     let nextState = Object.assign([], state);
     switch (action.type) {
