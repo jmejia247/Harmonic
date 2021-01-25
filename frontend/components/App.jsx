@@ -15,6 +15,10 @@ const App = () => (
       </Link>
       <NavBar />
     </header>
+    <img className='background'
+      src={window.guitar}
+      alt="guitar"
+    />
 
     <Switch>
       <AuthRoute exact path="/login" component={loginFormContainer} />

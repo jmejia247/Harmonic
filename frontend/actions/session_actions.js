@@ -44,25 +44,16 @@ const receiveErrors = errors => {
 
 export const signup = user => dispatch => {
   return (
-    UserApiUtil.signup(user).then((user) =>
-      dispatch(receiveCurrentUser(user))
-    ),
-    (errors) => dispatch(receiveErrors(errors.responseJSON))
-  );
+    UserApiUtil.signup(user).then((user) => dispatch(receiveCurrentUser(user)),
+    (errors) => dispatch(receiveErrors(errors.responseJSON))));
 }
 
 export const login = user => dispatch => {
   return (
-    UserApiUtil.login(user).then((user) =>
-      dispatch(receiveCurrentUser(user))
-    ),
-    (errors) => dispatch(receiveErrors(errors.responseJSON))
-  );
+    UserApiUtil.login(user).then((user) => dispatch(receiveCurrentUser(user)),(errors) => dispatch(receiveErrors(errors.responseJSON))));
 }
 
 export const logout = () => dispatch => {
   return (
-    UserApiUtil.logout().then((user) => dispatch(logoutCurrentUser(user))),
-    (errors) => dispatch(receiveErrors(errors.responseJSON))
-  );
+    UserApiUtil.logout().then((user) => dispatch(logoutCurrentUser(user)),(errors) => dispatch(receiveErrors(errors.responseJSON))));
 }

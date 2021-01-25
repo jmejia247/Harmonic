@@ -8,18 +8,24 @@ class NavBar extends React.Component {
     };
 
     render() {
-        // const {openModal} = this.props;
+
+        const content = this.props.user ? <div id="nav-logout" ><h3 className="logout-link" onClick={() => this.props.logout()}>Log Out</h3></div> : <div id="nav" ><h3
+                  className="signup-link"
+                  onClick={() => this.props.openModal("signup")}
+                >
+                  Sign up
+                </h3>
+                <h3
+                  className="login-link"
+                  onClick={() => this.props.openModal("login")}
+                >
+                  Log In
+                </h3></div>
+
         return (
-          <div id="nav">
-            <Link to="/signup" className="signup-link">
-              <h3>Sign up</h3>
-            </Link>
-            <Link to="/login" className="login-link">
-              <h3>Log In</h3>
-            </Link>
-            <button onClick={() => this.props.openModal('login')}>Login</button>
-            <button onClick={() => this.props.openModal('signup')}>Signup</button>
-          </div>
+            <div>
+                {content}
+            </div>
         );
     };
 }

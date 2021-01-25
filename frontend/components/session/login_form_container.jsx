@@ -1,27 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import sessionForm from './session_form';
+import SessionForm from './session_form';
 import { login } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-// const mSTP = (state, ownProps) => {
-//     return {
-//         errors: Object.values(state.errors),
-//         formType: 'login'
-//     };
-// };
-
-// const mDTP = (dispatch, ownProps) => {
-//     return {
-//         processForm: user => dispatch(login(user))
-//     };
-// };
-
-// export default connect(mSTP, mDTP)(sessionForm);
-
 const mSTP = (state, ownProps) => {
     return {
-        errors: Object.values(state.errors),
+        errors: state.errors.session,
         formType: 'login'
     };
 };
@@ -30,8 +15,9 @@ const mDTP = (dispatch, ownProps) => {
     return {
         processForm: user => dispatch(login(user)),
         closeModal: () => dispatch(closeModal()),
+        openModal: modal => dispatch(openModal('login')),
         otherForm: (<button onClick={() => dispatch(openModal('signup'))} >Signup</button>)
     };
 };
 
-export default connect(mSTP, mDTP)(sessionForm);
+export default connect(mSTP, mDTP)(SessionForm);

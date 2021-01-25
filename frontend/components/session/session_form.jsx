@@ -1,6 +1,6 @@
 import React from 'react';
 
-class sessionForm extends React.Component {
+class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,9 +11,15 @@ class sessionForm extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault();
-        // const user = Object.assign({}, this.state);
-        this.props.processForm(this.state);
+      // debugger
+      e.preventDefault();
+      const user = Object.assign({}, this.state);
+      this.props.processForm(user).then(this.props.closeModal);
+
+      // if (this.props.processForm(this.state) && this.props.errors.length === 0) {
+      //   debugger
+      //   this.props.closeModal();
+      // } 
     }
 
     update(field) {
@@ -24,17 +30,24 @@ class sessionForm extends React.Component {
         }
     }
 
+    renderErrors() {
+      const { errors } = this.props;
+      return (
+        <ul>
+          {errors.map((error, i) => (
+            <li key={i}>{error}</li>
+          ))}
+        </ul>
+      )
+    }
+
     render() {
-        const {errors} = this.props;
+        const { errors } = this.props;
         return (
           <form onSubmit={this.handleSubmit}>
             <h1>{this.props.formType}</h1>
             <br />
-            <ul>
-              {errors.map((error, i) => (
-                <li key={i}>{error}</li>
-              ))}
-            </ul>
+              {this.renderErrors()}
             <br />
             <label>
               Email:
@@ -54,10 +67,10 @@ class sessionForm extends React.Component {
               />
             </label>
             <br />
-            <button>{this.props.formType}</button>
+            <input type="submit" value={this.props.formType} />
           </form>
         );
     };
 }
 
-export default sessionForm;
+export default SessionForm;
