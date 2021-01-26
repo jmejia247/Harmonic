@@ -10,6 +10,10 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount() {
+      this.props.removeErrors();
+    }
+
     handleSubmit(e) {
       // debugger
       e.preventDefault();
@@ -40,10 +44,10 @@ class SessionForm extends React.Component {
         const { errors } = this.props;
         return (
           <div>
-            <section className='modal-heading'>
+            {/* <section className='modal-heading'>
               <h1 className='current-form'>{this.props.formType}</h1>
               {this.props.otherForm}
-            </section>
+            </section> */}
             <form onSubmit={this.handleSubmit}>
               <section className="modal-body">
                 <br />
@@ -70,6 +74,7 @@ class SessionForm extends React.Component {
                 </label>
                 <br />
                 <input className="session-button" type="submit" value={this.props.formType} />
+                <span className='demo' onClick={() => this.props.login({email: 'demo', password:'password'}).then(this.props.closeModal())} >Demo User</span>
               </section>
             </form>
           </div>

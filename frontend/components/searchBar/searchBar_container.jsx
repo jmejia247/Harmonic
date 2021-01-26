@@ -3,13 +3,13 @@ import SearchBar from './searchBar';
 
 const mSTP = (state, ownProps) => {
     return {
-        filters: Object.values(state.ui)
+        filter: Object.values(state.ui)
     };
 };
 
 const mDTP = (dispatch, ownProps) => {
     return {
-        fetchListings: () => dispatch(fetchListings())
+        processForm: filter => dispatch(fetchListings(filter))
     };
 };
 

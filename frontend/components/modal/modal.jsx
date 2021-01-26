@@ -1,10 +1,10 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
 
-function Modal({modal, closeModal}) {
+function Modal({modal, closeModal, openModal}) {
     if (!modal) {
         return null;
     }
@@ -20,11 +20,15 @@ function Modal({modal, closeModal}) {
             return null;
     }
     return (
-        <div className='modal-background' onClick={closeModal} >
-            <div className='modal-child' onClick={e => e.stopPropagation()} >
-                { component }
-            </div>
+      <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child" onClick={(e) => e.stopPropagation()}>
+          <section className="modal-heading">
+            <h1 className="signup-form" onClick={() => openModal('signup')} >Sign Up</h1>
+            <h1 className="login-form" onClick={() => openModal('login')} >Log In</h1>
+          </section>
+          {component}
         </div>
+      </div>
     );
 }
 
@@ -36,7 +40,8 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        openModal: modal => dispatch(openModal(modal))
     };
 };
 

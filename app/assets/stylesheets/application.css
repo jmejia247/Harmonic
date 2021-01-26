@@ -175,6 +175,7 @@ table {
 }
 
 .email {
+    font-family: 'Open Sans Condensed', sans-serif;
     border: 1px solid lightgrey;
     background: none;
     box-shadow: none;
@@ -184,11 +185,13 @@ table {
 }
 
 .password {
+    font-family: 'Open Sans Condensed', sans-serif;
     border: 1px solid lightgrey;
     background: none;
     box-shadow: none;
     width: 100%;
     border-radius: 3px;
+    min-width: 150px;
 }
 
 .session-button {
@@ -200,9 +203,20 @@ table {
     background-color: coral;
     color: cornsilk;
     border-radius: 3px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: large;
 }
 
-.current-form {
+.signup-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 115px;
+    border-bottom: 5px solid coral;
+}
+
+.login-form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -254,4 +268,19 @@ table {
     padding-bottom: 10px;
     font-size: x-large;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.demo {
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: 1px solid lightgrey;
+    background: none;
+    box-shadow: none;
+    height: 34px;
+    width: 240px;
+    border-radius: 3px;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: cornsilk;
 }
