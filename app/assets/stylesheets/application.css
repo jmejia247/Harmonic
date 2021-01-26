@@ -153,6 +153,7 @@ table {
 
 .background {
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .modal-heading {
@@ -207,4 +208,50 @@ table {
     flex-direction: column;
     width: 115px;
     border-bottom: 5px solid coral;
+}
+
+.search-bar1 {
+    border: 1px solid lightgrey;
+    background: none;
+    box-shadow: none;
+    height: 30px;
+    width: 800px;
+    font-family: 'Lobster', cursive;
+    color: lightgrey;
+}
+
+.search-button {
+    border: 1px solid lightgrey;
+    background: none;
+    box-shadow: none;
+    height: 34px;
+    width: 30px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+}
+
+.discover {
+    display: flex;
+    /* max-height: 6000px; */
+    border: 1px solid lightgrey;
+    overflow-x: auto;
+    padding-left: 30px;
+}
+
+.discover .tile {
+    min-width: 240px;
+    height: 325px;
+    padding: 0px 12px;
+    margin-bottom: 500px;
+    border: 1px solid black;
+}
+
+.discover-heading {
+    padding-left: 30px;
+    padding-bottom: 10px;
+    font-size: x-large;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
