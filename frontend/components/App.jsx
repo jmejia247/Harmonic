@@ -8,6 +8,7 @@ import Modal from './modal/modal';
 import SearchBar from './searchBar/searchBar_container';
 import DiscoverScroll from './discoverScroll/discoverScroll_container';
 import FilterBar from './filterBar/filterBar_container';
+import StaffPicks from './staffPicks/staffPicks';
 
 const App = () => (
   <div>
@@ -41,7 +42,7 @@ const App = () => (
       </div>
       <section>
         <DiscoverScroll />
-        
+        <StaffPicks />
       </section>
     </section>
     <Switch>
