@@ -20,7 +20,7 @@ const App = () => (
       <SearchBar />
       <NavBar />
     </header>
-    <section className='filter'>
+    <section className="filter">
       <FilterBar />
     </section>
     <section className="body">
@@ -34,10 +34,18 @@ const App = () => (
         <SearchBar />
         <h3 className="s2-rand">NEED INSPIRATION? TRY ONE OF THESE</h3>
         <section className="category-link">
-          <Link className="cat-link">Guitar</Link>
-          <Link className="cat-link">Bass</Link>
-          <Link className="cat-link">Drum</Link>
-          <Link className="cat-link">Keyboard</Link>
+          <Link to="/" className="cat-link">
+            Guitar
+          </Link>
+          <Link to="/" className="cat-link">
+            Bass
+          </Link>
+          <Link to="/" className="cat-link">
+            Drum
+          </Link>
+          <Link to="/" className="cat-link">
+            Keyboard
+          </Link>
         </section>
       </div>
       <section>
@@ -49,6 +57,54 @@ const App = () => (
       <AuthRoute exact path="/login" component={loginFormContainer} />
       <AuthRoute exact path="/signup" component={signupFormContainer} />
     </Switch>
+
+    <section className="footer">
+      <div className="footer-div">
+        <ul>
+          <li id="li1">Github</li>
+          <li>Linked In</li>
+          <li>Resume</li>
+          <li>Other projects</li>
+          <li>Home</li>
+        </ul>
+        <ul>
+          <li id="li1">Github</li>
+          <li>Linked In</li>
+          <li>Resume</li>
+          <li>Other projects</li>
+          <li>Home</li>
+        </ul>
+        <ul>
+          <li id="li1">Github</li>
+          <li>Linked In</li>
+          <li>Resume</li>
+          <li>Other projects</li>
+          <li>Home</li>
+        </ul>
+      </div>
+    </section>
+    <section className="bottom-footer">
+      <div className="bf-section1">
+        <i className="fas fa-music"></i>
+        <div className="bf-div">
+          <h1>Harmonic Gives</h1>
+          <p>
+            Your purchases help youth music programs get the gear they need to
+            make music.
+          </p>
+        </div>
+      </div>
+      <div className="bf-section2">
+        <i className="fas fa-tree"></i>
+        <div className="bf-div">
+          <h1>Carbon-Offset Shipping</h1>
+          <p>
+            Your purchases also help protect forests, including trees
+            traditionally used to make instruments.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 );
 

@@ -8,18 +8,28 @@ class NavBar extends React.Component {
 
     render() {
 
-        const content = this.props.user ? <div id="nav-logout" ><h3 className="logout-link" onClick={() => this.props.logout()}>Log Out</h3></div> : <div id="nav" ><h3
-                  className="signup-link"
-                  onClick={() => this.props.openModal("signup")}
-                >
-                  Sign up
-                </h3>
-                <h3
-                  className="login-link"
-                  onClick={() => this.props.openModal("login")}
-                >
-                  Log In
-                </h3></div>
+        const content = this.props.user ? (
+          <div id="nav-logout">
+            <h3 className="logout-link" onClick={() => this.props.logout()}>
+              <i class="fas fa-user-circle"></i>
+            </h3>
+          </div>
+        ) : (
+          <div id="nav">
+            <h3
+              className="signup-link"
+              onClick={() => this.props.openModal("signup")}
+            >
+              Sign up
+            </h3>
+            <h3
+              className="login-link"
+              onClick={() => this.props.openModal("login")}
+            >
+              Log In
+            </h3>
+          </div>
+        );
 
         return (
           <div className='navbar'>

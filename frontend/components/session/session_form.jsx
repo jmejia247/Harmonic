@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
       return (
         <ul>
           {errors.map((error, i) => (
-            <li key={i}>{error}</li>
+            <li key={i} className='errors'>{error}</li>
           ))}
         </ul>
       )
@@ -70,9 +70,10 @@ class SessionForm extends React.Component {
                   Email:
                   <input
                     className="email"
-                    type="text"
+                    type="email"
                     value={this.state.email}
                     onChange={this.update("email")}
+                    required
                   />
                 </label>
                 <br />
@@ -83,6 +84,7 @@ class SessionForm extends React.Component {
                     type="password"
                     value={this.state.password}
                     onChange={this.update("password")}
+                    required
                   />
                 </label>
                 <br />

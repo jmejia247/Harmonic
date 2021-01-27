@@ -10,7 +10,7 @@ class DiscoverScroll extends React.Component {
         return (
           <section className="discover-section">
             <h1 className="discover-heading">
-              New gear added every minute. What will you find?
+              Jose's Guitar Picks
             </h1>
             <ul className="discover">
               <li className="tile">

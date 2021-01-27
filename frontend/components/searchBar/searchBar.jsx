@@ -27,12 +27,12 @@ class SearchBar extends React.Component {
         return (
           <form className="search" onSubmit={this.handleSubmit}>
             <input
-              type="text"
+              type="search"
               className="search-bar1"
               value="Shop for unique music gear..."
               onChange={this.update("filter")}
             />
-            <i className="fas fa-search" id='search-button'></i>
+            <i className="fas fa-search fa-rotate-90" id="search-button"></i>
           </form>
         );
     }
