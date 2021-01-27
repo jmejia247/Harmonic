@@ -106,6 +106,9 @@ table {
     text-decoration: none;
     color: #F6870F;
 }
+.signup-link:hover {
+    cursor: pointer;
+}
 .signup-link:visited {
     color: #F6870F;
 }
@@ -114,6 +117,9 @@ table {
     text-decoration: none;
     color: #F6870F;
 }
+.login-link:hover {
+    cursor: pointer;
+}
 .login-link:visited {
     color: #F6870F;
 }
@@ -121,6 +127,9 @@ table {
 .logout-link {
     text-decoration: none;
     color: #F6870F;
+}
+.logout-link:hover {
+    cursor: pointer;
 }
 .logout-link:visited {
    color: #F6870F;
@@ -257,6 +266,9 @@ table {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: large;
 }
+.session-button:hover {
+    cursor: pointer;
+}
 
 .selected-form {
     display: flex;
@@ -265,12 +277,18 @@ table {
     width: 115px;
     border-bottom: 5px solid #F6870F;
 }
+.selected-form:hover {
+    cursor: pointer;
+}
 
 .nonselected-form {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 115px;
+}
+.nonselected-form:hover {
+    cursor: pointer;
 }
 
 .search-bar1 {
@@ -383,6 +401,9 @@ table {
     align-items: center;
     justify-content: center;
     color: cornsilk;
+}
+.demo:hover {
+    cursor: pointer;
 }
 
 .body {
