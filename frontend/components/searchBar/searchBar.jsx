@@ -24,12 +24,18 @@ class SearchBar extends React.Component {
     }
 
     render() {
+        const icon = <i className="fas fa-search"></i>;
         return (
-            <form className='search' onSubmit={this.handleSubmit}>
-                <input type="text" className='search-bar1' value="Shop for unique music gear..." onChange={this.update('filter')} />
-                <input type="submit" className='search-button' value='Go'/>
-            </form>
-        )
+          <form className="search" onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              className="search-bar1"
+              value="Shop for unique music gear..."
+              onChange={this.update("filter")}
+            />
+            <i className="fas fa-search" id='search-button'></i>
+          </form>
+        );
     }
 }
 

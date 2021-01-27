@@ -17,12 +17,25 @@ const App = () => (
       </Link>
       <SearchBar />
       <NavBar />
+      
     </header>
-    <section className='body'>
-      <img className='background'
-        src={window.guitar}
-        alt="guitar"
-      />
+    <section className="body">
+      <img className="background" src={window.guitar} alt="guitar" />
+      <div className="second-search">
+        <h3>
+          Join the millions of music lovers who use Reverb to find everything
+          they need to make music
+        </h3>
+        <h2 className="s2-heading">Find Your Dream Gear</h2>
+        <SearchBar />
+        <h3 className="s2-rand">NEED INSPIRATION? TRY ONE OF THESE</h3>
+        <section className="category-link">
+          <Link className="cat-link">Guitar</Link>
+          <Link className="cat-link">Bass</Link>
+          <Link className="cat-link">Drum</Link>
+          <Link className="cat-link">Keyboard</Link>
+        </section>
+      </div>
       <DiscoverScroll />
     </section>
     <Switch>

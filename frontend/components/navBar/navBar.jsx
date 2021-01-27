@@ -22,9 +22,10 @@ class NavBar extends React.Component {
                 </h3></div>
 
         return (
-            <div>
-                {content}
-            </div>
+          <div className='navbar'>
+            <i className="fas fa-shopping-cart" id='cart'><h3>cart</h3></i>
+            {content}
+          </div>
         );
     };
 }

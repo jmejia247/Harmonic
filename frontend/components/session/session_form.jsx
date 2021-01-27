@@ -40,41 +40,67 @@ class SessionForm extends React.Component {
       )
     }
 
+    title() {
+      let title;
+      if (this.props.formType === 'Login') {
+        return title = <h2 className='form-header'>Log In to Reverb</h2>;
+      } else {
+        return (title = (
+          <h2 className="form-header">
+            Join Millions of Musicians Around the World
+          </h2>
+        ));
+      }
+    }
+
     render() {
-        const { errors } = this.props;
         return (
           <div>
             {/* <section className='modal-heading'>
               <h1 className='current-form'>{this.props.formType}</h1>
               {this.props.otherForm}
             </section> */}
+            {this.title()}
             <form onSubmit={this.handleSubmit}>
               <section className="modal-body">
                 <br />
-                  {this.renderErrors()}
+                {this.renderErrors()}
                 <br />
-                <label>
+                <label className="label">
                   Email:
                   <input
-                    className='email'
+                    className="email"
                     type="text"
                     value={this.state.email}
                     onChange={this.update("email")}
                   />
                 </label>
                 <br />
-                <label>
+                <label className="label">
                   Password:
                   <input
-                    className='password'
+                    className="password"
                     type="password"
                     value={this.state.password}
                     onChange={this.update("password")}
                   />
                 </label>
                 <br />
-                <input className="session-button" type="submit" value={this.props.formType} />
-                <span className='demo' onClick={() => this.props.login({email: 'demo', password:'password'}).then(this.props.closeModal())} >Demo User</span>
+                <input
+                  className="session-button"
+                  type="submit"
+                  value={this.props.formType}
+                />
+                <span
+                  className="demo"
+                  onClick={() =>
+                    this.props
+                      .login({ email: "demo", password: "password" })
+                      .then(this.props.closeModal())
+                  }
+                >
+                  Demo User
+                </span>
               </section>
             </form>
           </div>

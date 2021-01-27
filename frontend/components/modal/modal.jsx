@@ -23,8 +23,22 @@ function Modal({modal, closeModal, openModal}) {
       <div className="modal-background" onClick={closeModal}>
         <div className="modal-child" onClick={(e) => e.stopPropagation()}>
           <section className="modal-heading">
-            <h1 className="signup-form" onClick={() => openModal('signup')} >Sign Up</h1>
-            <h1 className="login-form" onClick={() => openModal('login')} >Log In</h1>
+            <h1
+              className={
+                modal === "signup" ? "selected-form" : "nonselected-form"
+              }
+              onClick={() => openModal("signup")}
+            >
+              Sign Up
+            </h1>
+            <h1
+              className={
+                modal === "login" ? "selected-form" : "nonselected-form"
+              }
+              onClick={() => openModal("login")}
+            >
+              Log In
+            </h1>
           </section>
           {component}
         </div>

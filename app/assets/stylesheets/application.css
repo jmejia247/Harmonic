@@ -86,7 +86,7 @@ table {
 }
 
 .splash:visited {
-     color: coral;
+     color: #F6870F;
 }
 
 #nav {
@@ -102,31 +102,54 @@ table {
      margin-right: 39px;
 }
 
- .signup-link {
-     text-decoration: none;
-     color: coral;
- }
- .signup-link:visited {
-     color: coral;
- }
+.signup-link {
+    text-decoration: none;
+    color: #F6870F;
+}
+.signup-link:visited {
+    color: #F6870F;
+}
 
- .login-link {
-     text-decoration: none;
-     color: coral;
- }
- .login-link:visited {
-     color: coral;
- }
+.login-link {
+    text-decoration: none;
+    color: #F6870F;
+}
+.login-link:visited {
+    color: #F6870F;
+}
 
- .logout-link {
-     text-decoration: none;
-     color: coral;
- }
- .logout-link:visited {
-    color: coral;
- }
+.logout-link {
+    text-decoration: none;
+    color: #F6870F;
+}
+.logout-link:visited {
+   color: #F6870F;
+}
 
- .modal-background {
+#cart {
+    color: #F6870F;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 3px;
+}
+
+#cart h3 {
+    font-size: small;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+    min-height: 80px;
+}
+
+
+.modal-background {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -139,7 +162,7 @@ table {
 .modal-child {
   font-family: 'Lobster', cursive;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: whitesmoke;
@@ -147,12 +170,13 @@ table {
   border-top: 1px solid black;
   /* padding: 20px; */
   height: 500px;
-  width: 300px;
+  width: 392px;
   box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
 }
 
 .background {
     width: 100%;
+    max-height: 667px;
     padding-bottom: 30px;
 }
 
@@ -161,17 +185,33 @@ table {
     justify-content: space-around;
     text-decoration: none;
     /* background-color: crimson; */
-    width: 300px;
-    height: 38px;
+    width: 392px;
+    height: 57px;
     padding-top: 10px;
     border-bottom: 1px solid lightgrey;
+}
+.modal-heading h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 186px;
 }
 
 .modal-body {
     display: flex;
     align-items: center;
-    padding: 70px 0;
+    padding: 1px 0;
     flex-direction: column;
+}
+
+.form-header {
+    font-family: sans-serif;
+    font: bold;
+    font: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 .email {
@@ -181,7 +221,9 @@ table {
     box-shadow: none;
     width: 100%;
     border-radius: 3px;
-    min-width: 174px;
+    min-width: 324px;
+    min-height: 36px;
+    background-color: #E8F0FE;
 }
 
 .password {
@@ -191,16 +233,24 @@ table {
     box-shadow: none;
     width: 100%;
     border-radius: 3px;
-    min-width: 150px;
+    min-width: 302px;
+    min-height: 36px;
+    background-color: #E8F0FE;
+}
+
+.label {
+    font-family: sans-serif;
+    font-size: small;
+    font: bolder;
 }
 
 .session-button {
     border: 0;
     background: none;
     box-shadow: none;
-    width: 80%;
+    width: 380px;
     height: 30px;
-    background-color: coral;
+    background-color: #F6870F;
     color: cornsilk;
     border-radius: 3px;
     margin-bottom: 10px;
@@ -208,20 +258,19 @@ table {
     font-size: large;
 }
 
-.signup-form {
+.selected-form {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 115px;
-    border-bottom: 5px solid coral;
+    border-bottom: 5px solid #F6870F;
 }
 
-.login-form {
+.nonselected-form {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 115px;
-    border-bottom: 5px solid coral;
 }
 
 .search-bar1 {
@@ -234,11 +283,14 @@ table {
     color: lightgrey;
 }
 
-.search-button {
+#search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid lightgrey;
     background: none;
     box-shadow: none;
-    height: 34px;
+    height: 32px;
     width: 30px;
 }
 
@@ -276,11 +328,45 @@ table {
     background: none;
     box-shadow: none;
     height: 34px;
-    width: 240px;
+    width: 380px;
     border-radius: 3px;
-    background-color: coral;
+    background-color: #F6870F;
     display: flex;
     align-items: center;
     justify-content: center;
     color: cornsilk;
+}
+
+.body {
+    position: relative;
+}
+
+.second-search {
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    top: 220px;
+    left: 50px;
+    color: blanchedalmond;
+}
+
+.s2-heading {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+.s2-rand {
+    margin-top: 15px;
+}
+
+.category-link {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cat-link {
+    text-decoration: none;
+    color: blanchedalmond;
 }
