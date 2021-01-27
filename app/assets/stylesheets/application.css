@@ -68,7 +68,7 @@ table {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     min-height: 8.5vh;
+     max-height: 71px;
      text-decoration: none;
      border-bottom: 1px solid lightgrey;
 
@@ -296,7 +296,6 @@ table {
 
 .search {
     display: flex;
-    justify-content: space-around;
 }
 
 .discover {
@@ -369,4 +368,57 @@ table {
 .cat-link {
     text-decoration: none;
     color: blanchedalmond;
+}
+
+.filter {
+    min-width: 1184px;
+    min-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+.filterbar {
+    min-width: 1300px;
+    min-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar1 {
+    width: 900px;
+    min-height: 38px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.filter-navbar {
+    padding-right: 20px;
+    color: #414141;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.bar2 {
+    width: 443px;
+    min-height: 38px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-left: 1px solid lightgray;
+}
+
+.filter-navbar2 {
+    padding-right: 20px;
+    padding-left: 10px;
+    color: #414141;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: sans-serif;
 }

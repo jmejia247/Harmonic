@@ -24,7 +24,6 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        const icon = <i className="fas fa-search"></i>;
         return (
           <form className="search" onSubmit={this.handleSubmit}>
             <input

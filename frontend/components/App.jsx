@@ -7,6 +7,7 @@ import NavBar from './navBar/navBar_container';
 import Modal from './modal/modal';
 import SearchBar from './searchBar/searchBar_container';
 import DiscoverScroll from './discoverScroll/discoverScroll_container';
+import FilterBar from './filterBar/filterBar_container';
 
 const App = () => (
   <div>
@@ -17,8 +18,10 @@ const App = () => (
       </Link>
       <SearchBar />
       <NavBar />
-      
     </header>
+    <section className='filter'>
+      <FilterBar />
+    </section>
     <section className="body">
       <img className="background" src={window.guitar} alt="guitar" />
       <div className="second-search">
@@ -36,7 +39,10 @@ const App = () => (
           <Link className="cat-link">Keyboard</Link>
         </section>
       </div>
-      <DiscoverScroll />
+      <section>
+        <DiscoverScroll />
+        
+      </section>
     </section>
     <Switch>
       <AuthRoute exact path="/login" component={loginFormContainer} />
