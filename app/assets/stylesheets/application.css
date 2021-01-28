@@ -188,10 +188,26 @@ table {
 }
 
 .background {
-    opacity: 1;
+    /* background-color: rgba(255, 0, 0, 0.9); */
     width: 100%;
     max-height: 667px;
     padding-bottom: 30px;
+}
+
+.overlay-container {
+    position: relative;
+    width: 100%;   
+}
+
+.overlay {
+  position: absolute;
+  bottom: 35px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  min-height: 625px;
+  width: 100%;
+  opacity:1;
+  padding: 20px;
 }
 
 .modal-heading {
@@ -293,6 +309,7 @@ table {
     flex-direction: column;
     width: 115px;
     border-bottom: 5px solid #F6870F;
+    color: #F6870F;
 }
 .selected-form:hover {
     cursor: pointer;
@@ -306,6 +323,7 @@ table {
 }
 .nonselected-form:hover {
     cursor: pointer;
+    color: #F6870F;
 }
 
 
@@ -358,15 +376,23 @@ table {
 }
 
 
-
 .search-bar2 {
     border: 1px solid lightgrey;
     background: none;
     box-shadow: none;
-    height: 30px;
+    height: 53px;
     width: 800px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     font-family: 'Roboto', sans-serif;
+    font-size: large;
+    font-weight: 300;
     color: lightgrey;
+    padding-left: 10px;
+    background-color: white;
+}
+.search-bar2:focus {
+    outline: none;
 }
 
 #search-button2 {
@@ -376,13 +402,26 @@ table {
     border: 1px solid lightgrey;
     background: none;
     box-shadow: none;
-    height: 32px;
-    width: 30px;
+    height: 51px;
+    width: 51px;
+    /* border-bottom-right-radius: 3px; */
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color: white;
+    color: black;
+    font-size: xx-large;
 }
 
 .search2 {
     display: flex;
+    margin-right: 125px;
 }
+
+
+
+
+
+
 
 
 
@@ -465,7 +504,7 @@ table {
 }
 
 .discover .tile:hover{
-    box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.1), 0 0px 50px rgba(0,0,0,0.1);
 }
 
 
@@ -545,6 +584,7 @@ table {
     margin-bottom: 30px;
     margin-top: 30px;
     font-size: 60px;
+    font-weight: 100;
 }
 
 .s2-rand {
