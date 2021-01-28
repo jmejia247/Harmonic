@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
             <input
               type="search"
               className="search-bar1"
-              value="Shop for unique music gear..."
+            //   value="Shop for unique music gear..."
               onChange={this.update("filter")}
             />
             <i className="fas fa-search fa-rotate-90" id="search-button"></i>

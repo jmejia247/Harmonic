@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 function Listing(props) {
   return (
@@ -20,16 +19,4 @@ function Listing(props) {
   );
 }
 
-const mSTP = (state) => {
-  return {
-
-  };
-};
-
-const mDTP = (dispatch) => {
-  return {
-
-  };
-};
-
-export default connect(mSTP, mDTP)(Listing);
+export default Listing;

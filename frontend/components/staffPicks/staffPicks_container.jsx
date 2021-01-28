@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import StaffPicks from './staffPicks';
 
 const mSTP = (state, ownProps) => {
   return {

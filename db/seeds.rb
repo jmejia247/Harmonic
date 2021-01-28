@@ -12,3 +12,11 @@ u1 = User.create!(
     email: 'demo',
     password: 'password'
 )
+
+listing1 = Listing.create!( 
+    title: 'Vintage Gibson for sale', 
+    brand: 'Gibson', 
+    model: 'les Paul', 
+    price: 4560, 
+    description: 'Vintage Gibson from the 80s for sale' 
+) 
