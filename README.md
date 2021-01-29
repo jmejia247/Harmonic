@@ -8,7 +8,7 @@ Harmonic is a e-commerce website, allowing users to navigate through and find al
 
 ___
 
-[Live Site](https://harmonic-aa.herokuapp.com/#/) • [Key Features]() • [Software Used]()
+[Live Site](https://harmonic-aa.herokuapp.com/#/) • [Key Features](https://github.com/jmejia247/Harmonic/blob/main/README.md#key-features) • [Software Used]()
 
 ___
 
