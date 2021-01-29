@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Listing(props) {
   return (
-    <Link to='/listings/8'>
+    <Link to='/listings/1'>
     <div className="listing">
       <img src={window.gibson} alt="Gibson" className="listing-img" />
       <div className='listing-content'>  
