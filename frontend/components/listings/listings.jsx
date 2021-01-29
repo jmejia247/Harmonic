@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Listing(props) {
   return (
+    <Link to='/listings/8'>
     <div className="listing">
       <img src={window.gibson} alt="Gibson" className="listing-img" />
       <div className='listing-content'>  
@@ -16,6 +18,7 @@ function Listing(props) {
         <p>$4,560</p>
       </div>
     </div>
+    </Link>
   );
 }
 

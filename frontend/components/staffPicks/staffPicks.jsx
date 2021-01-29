@@ -8,45 +8,45 @@ class StaffPicks extends React.Component {
 
   render() {
     return (
-      <section className="staffpicks-section">
-        <h1 className="staffpicks-heading">
-          New gear added every minute. What will you find?
+      <section className="discover-section">
+        <h1 className="discover-heading">
+            Jose's Guitar Picks
         </h1>
-        <ul className="staffpicks">
-          <li className="stile">
+        <ul className="discover">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
-          <li className="stile">
+          <li className="tile">
             <Listing />
           </li>
         </ul>

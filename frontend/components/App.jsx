@@ -9,10 +9,11 @@ import SearchBar from './searchBar/searchBar_container';
 import FilterBar from './filterBar/filterBar_container';
 import listingsContainer from './listings/listings_container';
 import SplashPage from "./splashPage/splashPage";
+import ListingItemContainer from './listings/listing_item_container';
 
 const App = () => (
-  <div> 
-    <Modal /> 
+  <div>
+    <Modal />
     <header id="main">
       <Link to="/" className="splash">
         <h1 id="logo">Harmonic</h1>
@@ -24,13 +25,14 @@ const App = () => (
       <FilterBar />
     </section>
     <Switch>
-      <Route exact path='/' component={SplashPage}/> 
+      <Route exact path="/" component={SplashPage} />
+      <Route exact path="/listings/:listingId" component={ListingItemContainer}/>
       <AuthRoute exact path="/login" component={loginFormContainer} />
       <AuthRoute exact path="/signup" component={signupFormContainer} />
       <Route path="/listings" component={listingsContainer} />
     </Switch>
 
-    <section className="footer"> 
+    <section className="footer">
       <div className="footer-div">
         <ul>
           <li id="li1">Github</li>

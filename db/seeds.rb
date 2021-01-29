@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 User.delete_all
+Listing.destroy_all
 
 u1 = User.create!(
     email: 'demo',
@@ -20,3 +22,7 @@ listing1 = Listing.create!(
     price: 4560, 
     description: 'Vintage Gibson from the 80s for sale' 
 ) 
+
+file = File.open('app/assets/images/gibson.jpg')
+
+listing1.photo.attach(io: file, filename: 'gibson.jpg')

@@ -4,7 +4,7 @@ import { requestListings } from '../../actions/listing_actions';
 
 const mSTP = (state, ownProps) => {
   return {
-    // listings: Object.values(state.listings)
+    listings: Object.values(state.entities.listings)
   };
 };
 
