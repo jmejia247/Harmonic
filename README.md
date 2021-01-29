@@ -1,10 +1,10 @@
 # README
 
+<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%209.50.37%20AM.png"> </p>
 
+# <div align="center">Harmonic</div>
 
-# Harmonic
-
-Harmonic is a e-commerce website, allowing users to navigate through and find almost any musical gear that they want. 
+<div align="center"><p>Harmonic is a e-commerce website, allowing users to navigate through and find almost any musical gear that they want.</p></div>
 
 ___
 
@@ -16,6 +16,8 @@ ___
   
   ### Demo User 
    Accessed through a modal, users can sign in with a demo user to navigate the site and access log in only features.
+   
+   <p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%2010.33.46%20AM.png"> </p>
     
 ```javascript 
         return (
