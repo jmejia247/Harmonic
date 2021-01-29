@@ -1,24 +1,62 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+# Harmonic
 
-* System dependencies
+Harmonic is a e-commerce website, allowing users to navigate through and find almost any musical gear that they want. 
 
-* Configuration
+___
 
-* Database creation
+[Live Site](https://harmonic-aa.herokuapp.com/#/) • [Key Features]() • [Software Used]()
 
-* Database initialization
+___
 
-* How to run the test suite
+# Key Features
+  
+  ### Demo User 
+   Accessed through a modal, users can sign in with a demo user to navigate the site and access log in only features.
+    
+```javascript 
+        return (
+      <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child" onClick={(e) => e.stopPropagation()}>
+          <section className="modal-heading">
+            <h1
+              className={
+                modal === "signup" ? "selected-form" : "nonselected-form"
+              }
+              onClick={() => openModal("signup")}
+            >
+              Sign Up
+            </h1>
+            <h1
+              className={
+                modal === "login" ? "selected-form" : "nonselected-form"
+              }
+              onClick={() => openModal("login")}
+            >
+              Log In
+            </h1>
+          </section>
+          {component}
+        </div>
+      </div>
+    );
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+___
+
+# Software Used
+
+  * Ruby
+  * Ruby on Rails
+  * Node.js
+  * PostgresQl
+  * React
+  * redux
+  * AWS
+
+___
