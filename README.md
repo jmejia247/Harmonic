@@ -1,24 +1,64 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%209.50.37%20AM.png"> </p>
 
-Things you may want to cover:
+# <div align="center">Harmonic</div>
 
-* Ruby version
+<div align="center"><p>Harmonic is a e-commerce website, allowing users to navigate through and find almost any musical gear that they want.</p></div>
 
-* System dependencies
+___
 
-* Configuration
+[Live Site](https://harmonic-aa.herokuapp.com/#/) • [Key Features](https://github.com/jmejia247/Harmonic/blob/main/README.md#key-features) • [Software Used](https://github.com/jmejia247/Harmonic/blob/main/README.md#software-used)
 
-* Database creation
+___
 
-* Database initialization
+# Key Features
+  
+  ### Demo User 
+   Accessed through a modal, users can sign in with a demo user to navigate the site and access log in only features.
+   
+   <p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%2010.33.46%20AM.png"> </p>
+    
+```javascript 
+        return (
+      <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child" onClick={(e) => e.stopPropagation()}>
+          <section className="modal-heading">
+            <h1
+              className={
+                modal === "signup" ? "selected-form" : "nonselected-form"
+              }
+              onClick={() => openModal("signup")}
+            >
+              Sign Up
+            </h1>
+            <h1
+              className={
+                modal === "login" ? "selected-form" : "nonselected-form"
+              }
+              onClick={() => openModal("login")}
+            >
+              Log In
+            </h1>
+          </section>
+          {component}
+        </div>
+      </div>
+    );
+```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+___
 
-* ...
+# Software Used
+
+  * Ruby
+  * Ruby on Rails
+  * Node.js
+  * PostgresQl
+  * React
+  * redux
+  * AWS
+
+___
