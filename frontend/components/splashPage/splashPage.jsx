@@ -22,16 +22,16 @@ const splashPage = () => {
             <SearchBar2 />
             <h3 className="s2-rand">NEED INSPIRATION? TRY ONE OF THESE</h3>
             <section className="category-link">
-              <Link to="/listings/8" className="cat-link">
+              <Link to="/listings/10" className="cat-link">
                 Guitar
               </Link>
-              <Link to="/listings/8" className="cat-link">
+              <Link to="/listings/16" className="cat-link">
                 Bass
               </Link>
-              <Link to="/listings/" className="cat-link">
+              <Link to="/listings/21" className="cat-link">
                 Drum
               </Link>
-              <Link to="/listings" className="cat-link">
+              <Link to="/listings/27" className="cat-link">
                 Keyboard
               </Link>
             </section>

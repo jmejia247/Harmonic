@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
 import DiscoverScroll from './discoverScroll';
+import { requestListings } from '../../actions/listing_actions';
 
 const mSTP = (state, ownProps) => {
     return {
-        // listings: Object.values(state.user)
+      listings: Object.values(state.entities.listings)
     };
 };
 
 const mDTP = (dispatch, ownProps) => {
     return {
-        // fetchListings: () => dispatch(fetchListings())
+      requestListings: () => dispatch(requestListings())
     };
 };
 

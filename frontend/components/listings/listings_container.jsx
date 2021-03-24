@@ -1,16 +1,16 @@
 import { connect } from "react-redux";
 import Listing from './listings';
-import { requestListings } from '../../actions/listing_actions';
+import { requestListing } from '../../actions/listing_actions';
 
 const mSTP = (state, ownProps) => {
   return {
-    listings: Object.values(state.entities.listings)
+    // listing: state.entities.listings[ownProps.number]
   };
 };
 
 const mDTP = (dispatch, ownProps) => {
   return {
-    requestListings: () => dispatch(requestListings())
+    // requestListing: listingId => dispatch(requestListing(listingId))
   };
 };
 

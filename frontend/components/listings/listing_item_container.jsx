@@ -3,7 +3,7 @@ import ListingItem from "./listing_item";
 import { requestListing } from "../../actions/listing_actions";
 
 const mSTP = (state, ownProps) => {
-  // debugger
+  debugger
   return {
     listing: state.entities.listings[ownProps.match.params.listingId]
   };

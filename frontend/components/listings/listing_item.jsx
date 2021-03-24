@@ -26,7 +26,7 @@ class ListingItem extends React.Component {
                         <h3>{listing.model}</h3>
                     </section>
                     <h3 className='listing-item-title'>{listing.title}</h3>
-                    <p className='listing-item-price'>{`${listing.price}`}</p>
+                    <p className='listing-item-price'>{listing.price}</p>
                     <p>{listing.description}</p>
                     <input type="Submit" className='listing-item-button' value='Add to Cart'/>
                 </div>
