@@ -8,8 +8,3 @@
         # debugger
     end
 end
-
-# json.array! @listings.each do |listing|
-#   json.extract! listing, :id, :title, :model, :brand, :price, :description
-#   json.photoUrl url_for(listing.photo)
-# end

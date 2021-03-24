@@ -17,7 +17,7 @@ class Listing extends React.Component {
     const post = `/listings/${this.props.listing.id}`;
 
     return (
-      <Link to={post} >
+      <Link to={post} className='link-listing'>
       <div className="listing">
         <img src={this.props.listing.photoUrl} alt="Gibson" className="listing-img" />
         <div className='listing-content'>  

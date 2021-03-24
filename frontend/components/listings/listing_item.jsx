@@ -30,6 +30,7 @@ class ListingItem extends React.Component {
                     <p>{listing.description}</p>
                     <input type="Submit" className='listing-item-button' value='Add to Cart'/>
                 </div>
+                {/* <Reviews id={this.props.listing.id} > */}
             </div>
         );
     }
