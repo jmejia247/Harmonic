@@ -1,4 +1,5 @@
 import React from "react";
+import Reviews from '../reviews/reviews_container';
 
 class ListingItem extends React.Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class ListingItem extends React.Component {
     componentDidMount() {
         // debugger
         this.props.requestListing(this.props.match.params.listingId);
+        this.props.requestReviews();
     }
   
     render() {
@@ -26,11 +28,11 @@ class ListingItem extends React.Component {
                         <h3>{listing.model}</h3>
                     </section>
                     <h3 className='listing-item-title'>{listing.title}</h3>
-                    <p className='listing-item-price'>{listing.price}</p>
+                    <p className='listing-item-price'>${listing.price}</p>
                     <p>{listing.description}</p>
                     <input type="Submit" className='listing-item-button' value='Add to Cart'/>
+                    <Reviews  brand={listing.brand} model={listing.model} reviews={this.props.reviews} listing={listing.id}/>
                 </div>
-                {/* <Reviews id={this.props.listing.id} > */}
             </div>
         );
     }

@@ -554,6 +554,7 @@ table {
     box-shadow: none;
     border: 0;
     margin-top: 15px;
+    margin-bottom: 50px;
 }
 .listing-item-button:hover {
     cursor: pointer;
@@ -565,6 +566,47 @@ table {
     min-width: 750px;
     max-height: 687.47px;
     border: 1px solid lightgray;
+}
+
+
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid lightgray;
+    font-family: 'Roboto', sans-serif;
+}
+.reviews h3 {
+    padding-top: 10px;
+}
+
+.create-review {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6870F;
+    color: #FFFFFF;
+    border: 0;
+    box-shadow: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 160px;
+}
+
+.review-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.no-reviews{ 
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    min-width: 250px;
 }
 
 

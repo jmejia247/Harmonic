@@ -27,7 +27,7 @@ export const postReview = (review) => {
     })
 }
 
-export const patchReview = (review) => {
+export const updateReview = (review) => {
     return $.ajax({
         method: "PATCH",
         url: `/api/listings/${review.listingId}/reviews/${review.id}`,
