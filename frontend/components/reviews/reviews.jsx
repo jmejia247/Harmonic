@@ -3,6 +3,15 @@ import React from 'react';
 class Reviews extends React.Component {
     constructor(props) {
         super(props)
+        this.logic = this.logic.bind(this)
+    }
+
+    logic() {
+        if (this.props.user) {
+            this.props.openModal("createReview");
+        } else (
+            this.props.openModal("signup")
+        )
     }
 
     render() {
@@ -18,7 +27,7 @@ class Reviews extends React.Component {
             {/* <i class="fas fa-chevron-down" className="chevron-closed"></i>
             <i class="fas fa-chevron-up" className="chevron-open"></i> */}
 
-            <button className='create-review'>Write a pruduct review</button>
+            <button className='create-review' onClick={this.logic}>Write a pruduct review</button>
             <section className='review-content'>
                 {mapped}
             </section>

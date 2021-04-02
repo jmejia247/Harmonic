@@ -3,8 +3,27 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
+import ReviewFormContainer from '../reviews/reviewForm_container';
 
-function Modal({modal, closeModal, openModal}) {
+function Modal({modal, closeModal, openModal, user}) {
+
+    const sessionForm = (
+      <section className="modal-heading">
+        <h1
+          className={modal === "signup" ? "selected-form" : "nonselected-form"}
+          onClick={() => openModal("signup")}
+        >
+          Sign Up
+        </h1>
+        <h1
+          className={modal === "login" ? "selected-form" : "nonselected-form"}
+          onClick={() => openModal("login")}
+        >
+          Log In
+        </h1>
+      </section>
+    );
+
     if (!modal) {
         return null;
     }
@@ -16,30 +35,16 @@ function Modal({modal, closeModal, openModal}) {
         case 'signup':
             component = <SignupFormContainer />;
             break;
+        case 'createReview':
+            component = <ReviewFormContainer />;
+            break;
         default:
             return null;
     }
     return (
       <div className="modal-background" onClick={closeModal}>
         <div className="modal-child" onClick={(e) => e.stopPropagation()}>
-          <section className="modal-heading">
-            <h1
-              className={
-                modal === "signup" ? "selected-form" : "nonselected-form"
-              }
-              onClick={() => openModal("signup")}
-            >
-              Sign Up
-            </h1>
-            <h1
-              className={
-                modal === "login" ? "selected-form" : "nonselected-form"
-              }
-              onClick={() => openModal("login")}
-            >
-              Log In
-            </h1>
-          </section>
+          {user ? null : sessionForm}
           {component}
         </div>
       </div>
@@ -48,7 +53,8 @@ function Modal({modal, closeModal, openModal}) {
 
 const mSTP = state => {
     return {
-        modal: state.ui.modal
+      modal: state.ui.modal,
+      user: Boolean(state.session.id),
     };
 };
 
