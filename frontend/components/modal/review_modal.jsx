@@ -1,24 +1,25 @@
 import React from "react";
 import { closeModal, openModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
+import ReviewFormContainer from "../reviews/reviewForm_container";
 
-function ReviewModal({ modal, closeModal, openModal }) {
+function ReviewModal({ modal, closeModal, openModal, listing, user }) {
   if (!modal) {
     return null;
   }
   let component;
   switch (modal) {
     case "createReview":
-      component = <p>work in progress</p>;
+      component = <ReviewFormContainer id={listing} userId={user}/>;
       break;
     default:
       return null;
   }
   return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={(e) => e.stopPropagation()}>
-        <section className="modal-heading">
-          <h1>create a review</h1>
+    <div className="review-modal-background" onClick={closeModal}>
+      <div className="review-modal-child" onClick={(e) => e.stopPropagation()}>
+        <section className="review-modal-heading">
+          <h1>Create A Review</h1>
         </section>
         {component}
       </div>

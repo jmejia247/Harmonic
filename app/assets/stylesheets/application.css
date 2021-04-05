@@ -162,6 +162,73 @@ table {
 }
 
 
+
+
+
+
+
+
+
+
+
+.review-input {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgreen;
+    min-width: 900px;
+    min-height: 250px;
+    font-family: 'Roboto', sans-serif;
+}
+.review-tips {
+    background-color: darkmagenta;
+    min-width: 900px;
+    min-height: 75px;
+}
+
+
+
+
+.review-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.review-modal-child {
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  border-radius: 10px;
+  height: 450px;
+  width: 900px;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
+}
+
+.review-modal-heading {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* background-color: crimson; */
+    min-width: 900px;
+    min-height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+.review-modal-heading h1 {
+    font-size: 50px;
+}
+
+
 .modal-background {
   position: fixed;
   top: 0;

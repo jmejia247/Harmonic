@@ -5,6 +5,7 @@ import { openModal } from "../../actions/modal_actions";
 const mSTP = (state, ownProps) => {
   return {
     user: Boolean(state.session.id),
+    userId: state.session.id
   };
 };
 
