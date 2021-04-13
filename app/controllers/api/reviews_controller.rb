@@ -34,7 +34,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find_by(id: params[:id])
         if @review
             @review.destroy
-            render json: {}
+            render :show
         else
             render json: {error: 'review could not be found'}
         end

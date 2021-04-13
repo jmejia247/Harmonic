@@ -5,6 +5,7 @@ class Reviews extends React.Component {
     constructor(props) {
         super(props)
         this.logic = this.logic.bind(this)
+        this.logic2 = this.logic2.bind(this)
         this.delete = this.delete.bind(this)
     }
 
@@ -15,8 +16,17 @@ class Reviews extends React.Component {
             this.props.openModal("signup")
         )
     }
+    logic2() {
+        debugger
+        if (this.props.user) {
+            this.props.openModal("updateReview");
+        } else (
+            this.props.openModal("signup")
+        )
+    }
 
     delete(id) {
+        debugger
         this.props.deleteReview(id);
     }
 
@@ -29,12 +39,37 @@ class Reviews extends React.Component {
         const mapped = rev.filter(review => review.listing_id === listing);
 
         const rv = mapped.map(review => {
+            debugger
             return (
               <div className="review">
+                <ReviewModal
+                  review={review}
+                  listing={this.props.listing}
+                  user={this.props.userId}
+                />
                 <div className="title-review">
                   <h3 className="review-map-title">{review.title} by</h3>
                   <h3 className="review-map-name">{review.author_id}</h3>
-                  <button className={this.props.userId === review.author_id ? "review-map-user" : "review-map-no-user"} onClick={this.delete(review.listing_id)}>Delete Review</button>
+                  <button
+                    className={
+                      this.props.userId === review.author_id
+                        ? "review-map-user"
+                        : "review-map-no-user"
+                    }
+                    onClick={() => this.delete(review.id)}
+                  >
+                    Delete
+                  </button>
+                  <button
+                    className={
+                      this.props.userId === review.author_id
+                        ? "review-map-update"
+                        : "review-map-no-update"
+                    }
+                    onClick={this.logic2}
+                  >
+                    Update
+                  </button>
                 </div>
                 <h3 className="review-map-rating">{review.rating}</h3>
                 <p className="review-map-content">{review.content}</p>
@@ -47,7 +82,7 @@ class Reviews extends React.Component {
 
         return (
           <div className="reviews">
-            <ReviewModal listing={this.props.listing} user={this.props.userId}/>
+            {/* <ReviewModal listing={this.props.listing} user={this.props.userId}/> */}
             <h3>Reviews of the {`${this.props.brand} ${this.props.model}`}</h3>
 
             <button className='create-review' onClick={this.logic}>Write a product review</button>

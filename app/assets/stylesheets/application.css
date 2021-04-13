@@ -711,6 +711,19 @@ table {
 .review-map-no-user {
     display: none;
 }
+.review-map-update {
+    margin-left: 50px;
+    margin-top: 8px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6870F;
+    color: #FFFFFF;
+    box-shadow: none;
+    border-radius: 2px;
+    border: 0;
+}
+.review-map-no-update {
+    display: none;
+}
 
 .no-reviews{ 
     margin-top: 10px;

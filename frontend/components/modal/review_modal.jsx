@@ -2,8 +2,9 @@ import React from "react";
 import { closeModal, openModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
 import ReviewFormContainer from "../reviews/reviewForm_container";
+import UpdateFormContainer from '../reviews/updateForm_container'
 
-function ReviewModal({ modal, closeModal, openModal, listing, user }) {
+function ReviewModal({ modal, closeModal, openModal, listing, user, review }) {
   if (!modal) {
     return null;
   }
@@ -11,6 +12,9 @@ function ReviewModal({ modal, closeModal, openModal, listing, user }) {
   switch (modal) {
     case "createReview":
       component = <ReviewFormContainer id={listing} userId={user}/>;
+      break;
+    case 'updateReview':
+      component = <UpdateFormContainer review={review}/>;
       break;
     default:
       return null;
