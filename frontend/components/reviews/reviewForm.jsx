@@ -36,6 +36,9 @@ class reviewForm extends React.Component {
                   You are reviewing:
                   <h3>instrument</h3>
                 </label>
+                <label >Rating
+                    <input type="number" onChange={this.update("rating")} />
+                </label>
                 <label>
                   Review Title:
                   <input
@@ -43,9 +46,6 @@ class reviewForm extends React.Component {
                     type="text"
                     onChange={this.update("title")}
                   />
-                </label>
-                <label >Rating
-                    <input type="number" onChange={this.update("content")} />
                 </label>
                 <label>
                   Your Product Review

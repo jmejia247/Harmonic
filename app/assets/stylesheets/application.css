@@ -178,11 +178,13 @@ table {
     min-width: 900px;
     min-height: 250px;
     font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
 }
 .review-tips {
     background-color: darkmagenta;
     min-width: 900px;
     min-height: 75px;
+    margin-left: 20px;
 }
 
 
@@ -665,7 +667,49 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-top: 10px;
+    overflow-y: hidden;
+}
+
+.review {
+    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid lightgray;
+    background-color: ghostwhite;
+    width: 378.09px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+}
+.title-review {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+.review-map-title {
+    padding-right: 5px;
+}
+.review-map-rating {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.review-map-content {
+    padding-left: 10px;
+    font-weight: lighter;
+}
+
+.review-map-user {
+    margin-left: 50px;
+    margin-top: 8px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6870F;
+    color: #FFFFFF;
+    box-shadow: none;
+    border-radius: 2px;
+    border: 0;
+}
+.review-map-no-user {
+    display: none;
 }
 
 .no-reviews{ 
@@ -959,7 +1003,7 @@ table {
     margin-top: 30px;
 }
 
-.bf-div {
+.bf-div {  
     display: flex;
     flex-direction: column;
     width: 300px;

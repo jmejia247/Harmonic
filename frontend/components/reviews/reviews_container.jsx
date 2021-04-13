@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Reviews from './reviews';
 import { openModal } from "../../actions/modal_actions";
+import { deleteReview } from '../../actions/reviews_actions'
 
 const mSTP = (state, ownProps) => {
   return {
@@ -12,6 +13,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch, ownProps) => {
   return {
     openModal: (modal) => dispatch(openModal(modal)),
+    deleteReview: reviewId => dispatch(deleteReview(reviewId))
   };
 };
 
