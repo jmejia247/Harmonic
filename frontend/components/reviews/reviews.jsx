@@ -7,6 +7,9 @@ class Reviews extends React.Component {
         this.logic = this.logic.bind(this)
         this.logic2 = this.logic2.bind(this)
         this.delete = this.delete.bind(this)
+        this.state = {
+            rev: ''
+        }
     }
 
     logic() {
@@ -16,9 +19,12 @@ class Reviews extends React.Component {
             this.props.openModal("signup")
         )
     }
-    logic2() {
+    logic2(review) {
         debugger
         if (this.props.user) {
+            this.setState({
+                rev: review
+            })
             this.props.openModal("updateReview");
         } else (
             this.props.openModal("signup")
@@ -40,13 +46,13 @@ class Reviews extends React.Component {
 
         const rv = mapped.map(review => {
             debugger
+            // <ReviewModal
+            //   review={review}
+            //   listing={this.props.listing}
+            //   user={this.props.userId}
+            // />
             return (
               <div className="review">
-                <ReviewModal
-                  review={review}
-                  listing={this.props.listing}
-                  user={this.props.userId}
-                />
                 <div className="title-review">
                   <h3 className="review-map-title">{review.title} by</h3>
                   <h3 className="review-map-name">{review.author_id}</h3>
@@ -66,7 +72,7 @@ class Reviews extends React.Component {
                         ? "review-map-update"
                         : "review-map-no-update"
                     }
-                    onClick={this.logic2}
+                    onClick={() => this.logic2(review)}
                   >
                     Update
                   </button>
@@ -82,7 +88,7 @@ class Reviews extends React.Component {
 
         return (
           <div className="reviews">
-            {/* <ReviewModal listing={this.props.listing} user={this.props.userId}/> */}
+            <ReviewModal listing={this.props.listing} user={this.props.userId} review={this.state.rev}/>
             <h3>Reviews of the {`${this.props.brand} ${this.props.model}`}</h3>
 
             <button className='create-review' onClick={this.logic}>Write a product review</button>

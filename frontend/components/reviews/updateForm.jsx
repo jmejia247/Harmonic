@@ -10,11 +10,13 @@ class updateReview extends React.Component {
           rating: this.props.review.rating,
           author_id: this.props.review.author_id,
           listing_id: this.props.review.listing_id,
+          id: this.props.review.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         const review = Object.assign({}, this.state);
         this.props.updateReview(review).then(this.props.closeModal);
@@ -24,7 +26,6 @@ class updateReview extends React.Component {
         return e => {
             this.setState({
                 [field]: e.currentTarget.value
-                
             })
         }
     }
