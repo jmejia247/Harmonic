@@ -24,6 +24,7 @@ class updateReview extends React.Component {
         return e => {
             this.setState({
                 [field]: e.currentTarget.value
+                
             })
         }
     }
