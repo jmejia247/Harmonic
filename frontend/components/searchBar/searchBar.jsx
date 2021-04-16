@@ -1,39 +1,38 @@
 import React from 'react';
+import { debounce } from "lodash";
 
 class SearchBar extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            filter: ''
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
+      super(props);
+      this.state = {
+        filter: ''
+      };
+      this.search = debounce(this.search.bind(this), 300);
+      this.update = this.update.bind(this)
     };
-
-    handleSubmit(e) {
-        e.preventDefault();
-        const Listing = Object.assign({}, this.state);
-        this.props.processForm(Listing);        
+    
+    search() {
+      this.props.fetchResult(this.state.filter)
     }
 
-    update(field) {
-        return e => {
-            this.setState({
-                [field]: e.currentTarget.value
-            });
-        }
+    update(e) {
+      this.setState({
+          filter: e.currentTarget.value
+      });
+      this.search()
     }
 
     render() {
         return (
-          <form className="search" onSubmit={this.handleSubmit}>
+          <div className="search">
             <input
               type="search"
               className="search-bar1"
             //   value="Shop for unique music gear..."
-              onChange={this.update("filter")}
+              onChange={this.update}
             />
             <i className="fas fa-search fa-rotate-90" id="search-button"></i>
-          </form>
+          </div>
         );
     }
 }

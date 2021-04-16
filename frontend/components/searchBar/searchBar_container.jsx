@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import SearchBar from './searchBar';
+import { fetch_search_results } from '../../actions/search_actions'
 
 const mSTP = (state, ownProps) => {
     return {
@@ -9,7 +10,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps) => {
     return {
-        processForm: filter => dispatch(fetchListings(filter))
+        fetchResult: query => dispatch(fetch_search_results(query))
     };
 };
 

@@ -6,4 +6,9 @@ class Listing < ApplicationRecord
     has_many :reviews,
         foreign_key: :listing_id,
         class_name: :Review
+
+    belongs_to :shoppingCart, 
+        foreign_key: :listing_id,
+        class_name: :ShoppingCart
+
 end
