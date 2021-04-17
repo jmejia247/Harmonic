@@ -1,13 +1,13 @@
 class Api::ShoppingCartsController < ApplicationController
 
     def show
-        @review = ShoppingCarts.find_by(id: params[:id])
+        @shoppingCart = ShoppingCarts.find_by(id: params[:id])
         render :show
     end
 
     def create
         # debugger
-        @shoppingCart = shoppingCart.new(shoppingCart_params)
+        @shoppingCart = ShoppingCart.new(shoppingCart_params)
 
         if @shoppingCart.save
             render :show
@@ -16,19 +16,20 @@ class Api::ShoppingCartsController < ApplicationController
         end
     end
 
-    def update
-        @shoppingCart = ShoppingCarts.find_by(id: params[:id])
-        if @shoppingCart && @shoppingCart.update(shoppingCart_params)
-            render :show
-        else
-            render json: @shoppingCart.errors.full_messages, status: 422
-        end
-    end
+    # def update
+    #     @shoppingCart = ShoppingCarts.find_by(id: params[:id])
+    #     if @shoppingCart && @shoppingCart.update(shoppingCart_params)
+    #         render :show
+    #     else
+    #         render json: @shoppingCart.errors.full_messages, status: 422
+    #     end
+    # end
     
     def destroy
+        debugger
         @shoppingCart = ShoppingCarts.find_by(id: params[:id])
-        @shoppingCartItem = @shoppingCart.find_by(id: params[:listing_id])
-        if @shoppingCart
+        @shoppingCartItem = @shoppingCart.map()
+        if @shoppingCartItem
             @shoppingCartItem.destroy
             render :show
         else

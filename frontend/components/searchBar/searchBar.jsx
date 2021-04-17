@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
       this.state = {
         filter: ''
       };
-      this.search = debounce(this.search.bind(this), 300);
+      this.search = debounce(this.search.bind(this), 400);
       this.update = this.update.bind(this)
     };
     

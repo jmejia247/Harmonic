@@ -7,7 +7,7 @@ class Listing < ApplicationRecord
         foreign_key: :listing_id,
         class_name: :Review
 
-    belongs_to :shoppingCart, 
+    has_many :shoppingCarts, 
         foreign_key: :listing_id,
         class_name: :ShoppingCart
 
