@@ -1,1 +1,1 @@
-json.extract! shoppingCart, :id, :user_id, :listing_id
+json.extract! cart, :id, :user_id, :listing_id

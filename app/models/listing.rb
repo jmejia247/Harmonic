@@ -7,8 +7,8 @@ class Listing < ApplicationRecord
         foreign_key: :listing_id,
         class_name: :Review
 
-    has_many :shoppingCarts, 
+    has_many :carts, 
         foreign_key: :listing_id,
-        class_name: :ShoppingCart
+        class_name: :Cart
 
 end
