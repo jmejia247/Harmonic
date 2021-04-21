@@ -4,12 +4,22 @@ import Reviews from '../reviews/reviews_container';
 class ListingItem extends React.Component {
     constructor(props) {
         super(props);
+        this.addItem = this.addItem.bind(this);
     }
 
     componentDidMount() {
         // debugger
         this.props.requestListing(this.props.match.params.listingId);
         this.props.requestReviews();
+    }
+
+    addItem() {
+        if (this.props.user) {
+            const item = { listing_id: this.props.listing.id, user_id: this.props.userId };
+            this.props.cart(item);
+        } else {
+            this.props.openModal('signup')
+        }
     }
   
     render() {
@@ -18,6 +28,8 @@ class ListingItem extends React.Component {
         if (!listing) {
             return null;
         }
+
+
         return (
             <div className="listing-item">
                 <img src={listing.photoUrl} alt="Gibson" className="listing-item-img" />
@@ -30,7 +42,7 @@ class ListingItem extends React.Component {
                     <h3 className='listing-item-title'>{listing.title}</h3>
                     <p className='listing-item-price'>${listing.price}</p>
                     <p>{listing.description}</p>
-                    <input type="Submit" className='listing-item-button' value='Add to Cart'/>
+                    <input type="Submit" className='listing-item-button' value='Add to Cart' onClick={() => this.addItem()} />
                     <Reviews  brand={listing.brand} model={listing.model} reviews={this.props.reviews} listing={listing.id}/>
                 </div>
             </div>

@@ -1,37 +1,27 @@
 class Api::CartsController < ApplicationController
 
-    def show
-        @cart = Carts.find_by(id: cart_params[:user_id])
-        render :show
+    def index
+        @carts = Cart.where(user_id: current_user.id)
+        render :index
     end
 
     def create
-        # debugger
         @cart = Cart.new(cart_params)
 
         if @cart.save
+            @carts = Cart.where(user_id: current_user.id)
             render :index
         else
             render json: @cart.errors.full_messages, status: 422
         end
     end
-
-    # def update
-    #     @cart = carts.find_by(id: params[:id])
-    #     if @cart && @cart.update(cart_params)
-    #         render :show
-    #     else
-    #         render json: @cart.errors.full_messages, status: 422
-    #     end
-    # end
     
     def destroy
         # debugger
-        # @cart = carts.find_by(id: params[:id])
-        # @cartItem = @cart.map()
-        @cart = Cart.where(id: cart_params[:user_id]).where(listing_id: cart_params[:listing_id])
+        @cart = Cart.where(user_id: current_user.id).where(listing_id: cart_params[:listing_id])
         if @cart
-            @cart.destroy
+            @cart[0].destroy
+            @carts = Cart.where(user_id: current_user.id)
             render :index
         else
             render json: {error: 'item could not be found'}

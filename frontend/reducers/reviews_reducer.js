@@ -8,7 +8,7 @@ import {
 const ReviewReducer = (state = {}, action) => {
     Object.freeze(state);
     let nextState = Object.assign({}, state);
-    console.log(action)
+//     console.log(action)
     switch (action.type) {
       case RECIEVE_REVIEWS:
             return action.reviews

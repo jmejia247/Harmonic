@@ -10,6 +10,7 @@ import FilterBar from './filterBar/filterBar_container';
 import listingsContainer from './listings/listings_container';
 import SplashPage from "./splashPage/splashPage";
 import ListingItemContainer from './listings/listing_item_container';
+import CartContainer from '../components/cart/cart_container';
 
 const App = () => (
   <div>
@@ -29,6 +30,7 @@ const App = () => (
       <Route exact path="/listings/:listingId" component={ListingItemContainer}/>
       <AuthRoute exact path="/login" component={loginFormContainer} />
       <AuthRoute exact path="/signup" component={signupFormContainer} />
+      <Route exact path='/cart' component={CartContainer} />
       <Route path="/listings" component={listingsContainer} />
     </Switch>
 

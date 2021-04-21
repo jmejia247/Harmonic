@@ -1066,3 +1066,116 @@ table {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 200px;
+    flex-direction: column;
+}
+
+.cart-item {
+    border: 1px solid lightgray;
+    border-radius: 3px;  
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 950px;
+
+}
+
+.cart-item-img {
+    max-height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.item-cart {
+    width: 800px;
+    height: 150px;
+}
+
+.item-cart-info {
+    width: 800px;
+    height: 100px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-item-checkout {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 50px;
+    width: 800px;
+    margin-top: 3px;
+}
+
+.cart-item-button {
+    margin-top: 5px;
+    height: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6870F;
+    box-shadow: none;
+    border: 0;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.cart-item-checkout-button {
+    margin-right: 15px;
+    color: #FFFFFF;
+    border: 0;
+    box-shadow: none;
+    border-radius: 3px;
+    height: 25px;
+    background-color: #52b052;
+    background: #59b359;
+}
+
+.cart-item-disclaimer {
+    margin-right: 15px;
+    margin-bottom: 2px;
+    font-size: smaller;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cart-item-quant {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cart-item-info {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 550px;
+}
+
+.cart-item-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item-price {
+}
+
+.cart-item-purchase {
+    width: 250px;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}

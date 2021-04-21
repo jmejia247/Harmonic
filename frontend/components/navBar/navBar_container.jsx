@@ -3,6 +3,7 @@ import { openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import NavBar from './navBar';
 import { logout } from '../../actions/session_actions';
+import { requestCart } from '../../actions/cart_actions'
 
 const mSTP = state => {
     return {
@@ -13,7 +14,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         openModal: modal => dispatch(openModal(modal)),
-        logout: () => dispatch(logout())
+        logout: () => dispatch(logout()),
+        cart: () => dispatch(requestCart())
     };
 };
 

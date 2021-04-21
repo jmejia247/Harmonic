@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Switch, Link } from "react-router-dom";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -14,6 +14,7 @@ class NavBar extends React.Component {
               <i class="fas fa-user-circle"></i>
             </h3>
           </div>
+          
         ) : (
           <div id="nav">
             <h3
@@ -32,8 +33,12 @@ class NavBar extends React.Component {
         );
 
         return (
-          <div className='navbar'>
-            <i className="fas fa-shopping-cart" id='cart'><h3>cart</h3></i>
+          <div className="navbar">
+            <Link to='/cart' >
+              <i className="fas fa-shopping-cart" id="cart" onClick={() => this.props.cart()}>
+                <h3>cart</h3>
+              </i>
+            </Link>
             {content}
           </div>
         );
