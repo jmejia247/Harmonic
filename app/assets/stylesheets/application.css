@@ -965,13 +965,25 @@ table {
     font-family: 'Roboto', sans-serif;
 }
 
-.footer-div ul li{
+.footer-div ul a{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: small;
+    text-decoration: none;
 }
+
+.footer-div ul a:visited {
+    color: #fff;
+}
+
+.footer-div ul a:hover{
+    cursor: pointer;
+}
+
 #li1 {
     font-weight: 800;
 }

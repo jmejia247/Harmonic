@@ -27,35 +27,94 @@ const App = () => (
     </section>
     <Switch>
       <Route exact path="/" component={SplashPage} />
-      <Route exact path="/listings/:listingId" component={ListingItemContainer}/>
+      <Route
+        exact
+        path="/listings/:listingId"
+        component={ListingItemContainer}
+      />
       <AuthRoute exact path="/login" component={loginFormContainer} />
       <AuthRoute exact path="/signup" component={signupFormContainer} />
-      <Route exact path='/cart' component={CartContainer} />
+      <Route exact path="/cart" component={CartContainer} />
       <Route path="/listings" component={listingsContainer} />
     </Switch>
 
     <section className="footer">
       <div className="footer-div">
         <ul>
-          <li id="li1">Github</li>
-          <li>Linked In</li>
-          <li>Resume</li>
-          <li>Other projects</li>
-          <li>Home</li>
+          <a
+            href="https://whats-cooking-programmers.herokuapp.com/#/"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            What's Cooking?
+          </a>
+          <a
+            href="https://github.com/galenddavis/whats_cooking"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            Github
+          </a>
+          <a
+            href="https://whats-cooking-programmers.herokuapp.com/#/"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            Live link
+          </a>
         </ul>
         <ul>
-          <li id="li1">Github</li>
-          <li>Linked In</li>
-          <li>Resume</li>
-          <li>Other projects</li>
-          <li>Home</li>
+          <a
+            href="https://github.com/jmejia247"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            Jose's Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jose-mejia-531907206/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://angel.co/u/jose-mejia-15"
+            target="_blank"
+            rel="noreferrer"
+          >
+            AngelList
+          </a>
         </ul>
         <ul>
-          <li id="li1">Github</li>
-          <li>Linked In</li>
-          <li>Resume</li>
-          <li>Other projects</li>
-          <li>Home</li>
+          <a
+            href="https://jmejia247.github.io/BattleForYavin/"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            Battle for Yavin
+          </a>
+          <a
+            href="https://github.com/jmejia247/BattleForYavin"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            Github
+          </a>
+          <a
+            href="https://jmejia247.github.io/BattleForYavin/"
+            target="_blank"
+            rel="noreferrer"
+            id="li1"
+          >
+            Live link
+          </a>
         </ul>
       </div>
     </section>
