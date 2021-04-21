@@ -32,16 +32,3 @@ class Listing extends React.Component {
 }
 
 export default Listing;
-
-// dynamic render to replace once i finish listings
-
-// ({ listings, requestListings })
-// return (
-//   <div className='listing'>
-//       <div className='listing-content'>
-//         <h3>{listing.title}</h3>
-//         <span>{listing.rating}</span>
-//         <div>{listing.price}</div>
-//       </div>
-//   </div>
-// )

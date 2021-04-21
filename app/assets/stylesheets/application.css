@@ -518,6 +518,7 @@ table {
 }
 .link-listing {
     text-decoration: none;
+    margin-right: 20px;
 }
 .link-listing :visited {
     text-decoration: none;
@@ -633,7 +634,9 @@ table {
 
 .listing-item-img{
     min-width: 750px;
+    max-width: 750px;
     max-height: 687.47px;
+    min-height: 687.47px;
     border: 1px solid lightgray;
 }
 

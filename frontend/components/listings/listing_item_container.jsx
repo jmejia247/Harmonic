@@ -12,6 +12,7 @@ const mSTP = (state, ownProps) => {
     reviews: state.reviews,
     userId: state.session.id,
     user: Boolean(state.session.id),
+    shopping: Object.values(state.cart)
   };
 };
 

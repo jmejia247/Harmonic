@@ -89,6 +89,20 @@ const App = () => (
           >
             AngelList
           </a>
+          <a
+            href="https://angel.co/u/jose-mejia-15"
+            target="_blank"
+            rel="noreferrer"
+          >
+            HandShake
+          </a>
+          <a
+            href="https://angel.co/u/jose-mejia-15"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </a>
         </ul>
         <ul>
           <a

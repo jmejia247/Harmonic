@@ -13,11 +13,16 @@ class ListingItem extends React.Component {
         this.props.requestReviews();
     }
 
-    addItem() {
-        if (this.props.user) {
+    addItem(id) {
+        debugger
+        const {shopping} = this.props;
+        const extract = shopping.map((item) => item.listing_id)
+        debugger
+        if (this.props.user && !extract.includes(id)) {
+            debugger
             const item = { listing_id: this.props.listing.id, user_id: this.props.userId };
             this.props.cart(item);
-        } else {
+        } else if (!this.props.user) {
             this.props.openModal('signup')
         }
     }
@@ -42,7 +47,7 @@ class ListingItem extends React.Component {
                     <h3 className='listing-item-title'>{listing.title}</h3>
                     <p className='listing-item-price'>${listing.price}</p>
                     <p>{listing.description}</p>
-                    <input type="Submit" className='listing-item-button' value='Add to Cart' onClick={() => this.addItem()} />
+                    <input type="Submit" className='listing-item-button' value='Add to Cart' onClick={() => this.addItem(listing.id)} />
                     <Reviews  brand={listing.brand} model={listing.model} reviews={this.props.reviews} listing={listing.id}/>
                 </div>
             </div>
