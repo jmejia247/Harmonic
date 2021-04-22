@@ -7,7 +7,8 @@ import { requestCart } from '../../actions/cart_actions'
 
 const mSTP = state => {
     return {
-        user: Boolean(state.session.id)
+        user: Boolean(state.session.id),
+        email: state.session.email
     };
 };
 

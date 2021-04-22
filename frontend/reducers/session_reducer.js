@@ -3,7 +3,8 @@ import {
 } from "../actions/session_actions";
 
 const noUser = {
-  id: null
+  id: null,
+  email: null
 };
 
 const sessionReducer = (state = noUser, action) => {
@@ -13,7 +14,7 @@ const sessionReducer = (state = noUser, action) => {
   let nextState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return { id: action.user.id };
+      return { id: action.user.id, email: action.user.email };
     case LOGOUT_CURRENT_USER:
       return noUser;
     default:

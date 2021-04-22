@@ -2,13 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import reviewForm from './reviewForm';
 import { closeModal } from "../../actions/modal_actions";
-import {postReview} from '../../actions/reviews_actions';
+import {postReview, requestReviews} from '../../actions/reviews_actions';
 
 const mSTP = (state, ownProps) => {
     return {
       formType: "Review",
-      user: state.entities.users,
+      user: state.session.id,
       listing: state.entities.listings,
+      email: state.session.email
     };
 }
 

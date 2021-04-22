@@ -7,14 +7,27 @@ class NavBar extends React.Component {
     };
 
     render() {
+      debugger
 
         const content = this.props.user ? (
-          <div id="nav-logout">
-            <h3 className="logout-link" onClick={() => this.props.logout()}>
-              <i class="fas fa-user-circle"></i>
-            </h3>
-          </div>
-          
+          <section className='user-interface'>
+            <div id="nav-logout">
+              <h3 className="logout-link" onClick={() => this.props.logout()}>
+                <i class="fas fa-user-circle">
+                <h3 className='logout-link-name'>{this.props.email}</h3>
+                </i>
+              </h3>
+            </div>
+            <Link to="/cart" className='cart-logo'>
+              <i
+                className="fas fa-shopping-cart"
+                id="cart-logo"
+                onClick={() => this.props.cart()}
+              >
+                <h3 >cart</h3>
+              </i>
+            </Link>
+          </section>
         ) : (
           <div id="nav">
             <h3
@@ -34,11 +47,6 @@ class NavBar extends React.Component {
 
         return (
           <div className="navbar">
-            <Link to='/cart' >
-              <i className="fas fa-shopping-cart" id="cart" onClick={() => this.props.cart()}>
-                <h3>cart</h3>
-              </i>
-            </Link>
             {content}
           </div>
         );

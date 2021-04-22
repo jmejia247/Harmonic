@@ -1,4 +1,5 @@
-// Prefix Verb   URI Pattern                                                                              Controller#Action
+//  Prefix Verb   URI Pattern                                                                              Controller#Action
+//            api_user_carts GET    /api/users/:user_id/carts(.:format)                                                      api/carts#index {:format=>:json}
 //                 api_users POST   /api/users(.:format)                                                                     api/users#create {:format=>:json}
 //                  api_user GET    /api/users/:id(.:format)                                                                 api/users#show {:format=>:json}
 //               api_session DELETE /api/session(.:format)                                                                   api/sessions#destroy {:format=>:json}
@@ -12,8 +13,7 @@
 //                api_review GET    /api/reviews/:id(.:format)                                                               api/reviews#show {:format=>:json}
 //                           DELETE /api/reviews/:id(.:format)                                                               api/reviews#destroy {:format=>:json}
 //          api_search_index GET    /api/search(.:format)                                                                    api/search#index {:format=>:json}
-//                 api_carts GET    /api/carts(.:format)                                                                     api/carts#index {:format=>:json}
-//                           POST   /api/carts(.:format)                                                                     api/carts#create {:format=>:json}
+//                 api_carts POST   /api/carts(.:format)                                                                     api/carts#create {:format=>:json}
 //                  api_cart DELETE /api/carts/:id(.:format)                                                                 api/carts#destroy {:format=>:json}
 //                      root GET    /                                                                                        static_pages#root
 //        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
@@ -23,10 +23,10 @@
 //      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
 
 
-export const fetchCart = () => {
+export const fetchCart = (user_id) => {
   return $.ajax({
     method: "GET",
-    url: `/api/carts`,
+    url: `/api/users/${user_id}/carts`,
   });
 };
 

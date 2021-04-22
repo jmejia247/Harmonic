@@ -20,11 +20,19 @@ function ReviewModal({ modal, closeModal, openModal, listing, user, review }) {
     default:
       return null;
   }
+
+  const formType =
+    modal === "createReview" ? (
+      <h1>Create A Review</h1>
+    ) : (
+      <h1>Update Review</h1>
+    );
+
   return (
     <div className="review-modal-background" onClick={closeModal}>
       <div className="review-modal-child" onClick={(e) => e.stopPropagation()}>
         <section className="review-modal-heading">
-          <h1>Create A Review</h1>
+          {formType}
         </section>
         {component}
       </div>

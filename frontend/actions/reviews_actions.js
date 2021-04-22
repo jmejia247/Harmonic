@@ -53,7 +53,7 @@ export const requestReview = reviewId => dispatch => {
 }
 
 export const postReview = (review) => dispatch => {
-    return ReviewApiUtil.postReview(review).then(review => dispatch(post_review(review)))
+    return ReviewApiUtil.postReview(review).then(review => dispatch(recieve_reviews(review)))
 }
 
 export const updateReview = review => dispatch => {

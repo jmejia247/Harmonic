@@ -55,7 +55,7 @@ class Reviews extends React.Component {
               <div className="review">
                 <div className="title-review">
                   <h3 className="review-map-title">{review.title} by</h3>
-                  <h3 className="review-map-name">{review.author_id}</h3>
+                  <h3 className="review-map-name">{review.email}</h3>
                   <button
                     className={
                       this.props.userId === review.author_id

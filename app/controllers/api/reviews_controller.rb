@@ -15,7 +15,8 @@ class Api::ReviewsController < ApplicationController
         @review = Review.new(review_params)
 
         if @review.save
-            render :show
+            @reviews = Review.where(listing_id: review_params[:listing_id])
+            render :index
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -43,7 +44,7 @@ class Api::ReviewsController < ApplicationController
     private
 
     def review_params 
-        params.require(:review).permit(:title, :content, :author_id, :listing_id, :rating)
+        params.require(:review).permit(:title, :content, :author_id, :listing_id, :rating, :email)
     end
 
 end

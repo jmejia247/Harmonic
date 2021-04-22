@@ -102,6 +102,13 @@ table {
      margin-right: 39px;
 }
 
+.user-interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .signup-link {
     text-decoration: none;
     color: #F6870F;
@@ -129,7 +136,11 @@ table {
     color: #F6870F;
 }
 .logout-link i{
-    font-size: xx-large;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .logout-link:hover {
     cursor: pointer;
@@ -138,7 +149,13 @@ table {
    color: #F6870F;
 }
 
-#cart {
+.logout-link-name {
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#cart-logo {
     color: #F6870F;
     font-size: x-large;
     display: flex;
@@ -146,11 +163,29 @@ table {
     align-items: center;
     flex-direction: column;
     padding-right: 3px;
+    text-decoration: none;
 }
 
-#cart h3 {
+#cart-logo:visited {
+    color: #F6870F;
+}
+
+#cart-logo h3 {
     font-size: small;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+#cart-logo h3:visited {
+    color: #F6870F;
+    text-decoration: none;
+}
+
+.cart-logo {
+    text-decoration: none;
+}
+.cart-logo:visited {
+    text-decoration: none;
 }
 
 .navbar {
@@ -170,22 +205,114 @@ table {
 
 
 
-
+.review-form{
+    display: flex;
+    flex-direction: column;
+}
 .review-input {
     display: flex;
     flex-direction: column;
-    background-color: darkgreen;
-    min-width: 900px;
-    min-height: 250px;
+    height: 500px;
     font-family: 'Roboto', sans-serif;
     margin-left: 20px;
 }
-.review-tips {
-    background-color: darkmagenta;
-    min-width: 900px;
-    min-height: 75px;
-    margin-left: 20px;
+.review-info{ 
+    display: flex;
+    flex-direction: column;
+    height: 350px;
 }
+.review-input-label {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid lightgrey;
+    background: none;
+    box-shadow: none;
+    border-radius: 3px;
+    background-color: #E8F0FE;
+    width: 200px;
+    height: 25px;
+}
+.review-input-label-rating {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid lightgrey;
+    background: none;
+    box-shadow: none;
+    border-radius: 3px;
+    background-color: #E8F0FE;
+    width: 25px;
+    height: 25px;
+}
+.review-tips {
+    height: 150px;
+    border-bottom: 1px solid lightgray;
+}
+.review-tips-title {
+    font-size: large;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+.review-tips-info {
+    font-family: 'Roboto', sans-serif;
+}
+
+.review-input-text {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid lightgrey;
+    background: none;
+    box-shadow: none;
+    border-radius: 3px;
+    background-color: #E8F0FE;
+    width: 450px;
+    height: 75px;
+}
+
+.review-submit {
+    height: 100px;
+}
+
+.review-label-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.review-label-2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.review-label-3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.review-label-4 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.review-modal-submit {
+    margin-left: 15px;
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6870F;
+    color: #FFFFFF;
+    border: 0;
+    box-shadow: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -209,8 +336,8 @@ table {
   transform: translate(-50%, -50%);
   background-color: whitesmoke;
   border-radius: 10px;
-  height: 450px;
-  width: 900px;
+  height: 650px;
+  width: 500px;
   box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
 }
 
@@ -221,7 +348,7 @@ table {
     align-items: center;
     text-decoration: none;
     /* background-color: crimson; */
-    min-width: 900px;
+    min-width: 500px;
     min-height: 50px;
     padding-top: 10px;
     border-bottom: 1px solid lightgrey;
@@ -229,6 +356,9 @@ table {
 .review-modal-heading h1 {
     font-size: 50px;
 }
+
+
+
 
 
 .modal-background {

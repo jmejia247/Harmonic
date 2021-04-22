@@ -7,16 +7,25 @@ class reviewForm extends React.Component {
             title: '',
             content: '',
             rating: '',
-            author_id: this.props.user[this.props.userId].id,
-            listing_id: this.props.listing[this.props.id].id
+            author_id: this.props.user,
+            listing_id: this.props.listing[this.props.id].id,
+            email: this.props.email
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updates = this.updates.bind(this)
     }
 
     handleSubmit(e) {
-        e.preventDefault();
-        const review = Object.assign({}, this.state);
-        this.props.processForm(review).then(this.props.closeModal);
+      debugger
+      e.preventDefault();
+      const review = Object.assign({}, this.state);
+      this.props.processForm(review).then(this.updates());
+    }
+
+    updates() {
+      debugger
+      this.props.closeModal();
+      
     }
 
     update(field) {
@@ -32,31 +41,54 @@ class reviewForm extends React.Component {
           <div className="review-card">
             <form onSubmit={this.handleSubmit} className="review-form">
               <div className="review-input">
-                <label>
-                  You are reviewing:
-                  <h3>instrument</h3>
-                </label>
-                <label >Rating
-                    <input type="number" onChange={this.update("rating")} />
-                </label>
-                <label>
-                  Review Title:
-                  <input
-                    className="review-title"
-                    type="text"
-                    onChange={this.update("title")}
-                  />
-                </label>
-                <label>
-                  Your Product Review
-                  <textarea
-                    className="review-content"
-                    onChange={this.update("content")}
-                  />
-                </label>
+                <div className="review-info">
+                  <label className="review-label-1">
+                    You are reviewing: <h3>instrument</h3>
+                  </label>
+                  <label className="review-label-2">
+                    Rating
+                    <input
+                      type="number"
+                      onChange={this.update("rating")}
+                      className="review-input-label-rating"
+                    />
+                  </label>
+                  <label className="review-label-3">
+                    Review Title:
+                    <input
+                      className="review-title"
+                      type="text"
+                      onChange={this.update("title")}
+                      className="review-input-label"
+                    />
+                  </label>
+                  <label className="review-label-4">
+                    Your Product Review
+                    <textarea
+                      className="review-input-text"
+                      onChange={this.update("content")}
+                    />
+                  </label>
+                </div>
+                <div className="review-tips">
+                  <h3 className='review-tips-title'>Review Tips</h3>
+                  <h3 className='review-tips-info'>
+                    Do: talk about how it sounds, mention pros and cons, and
+                    compare it to other products.
+                  </h3>
+                  <h3 className='review-tips-info'>
+                    Don't: review a seller, your shipping experience, or include
+                    offensive content.
+                  </h3>
+                </div>
               </div>
-              <section className="review-tips"></section>
-              <input type="submit" value='Post Review' />
+              <div className="review-submit">
+                <input
+                  type="submit"
+                  value="Post Review"
+                  className="review-modal-submit"
+                />
+              </div>
             </form>
           </div>
         );
