@@ -1,4 +1,6 @@
 import React from "react";
+import { debounce } from "lodash";
+import SearchModal2 from "../modal/search_modal2";
 
 class SearchBar2 extends React.Component {
   constructor(props) {
@@ -6,34 +8,40 @@ class SearchBar2 extends React.Component {
     this.state = {
       filter: "",
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.search = debounce(this.search.bind(this), 400);
+    this.update = this.update.bind(this);
+    this.modal = this.modal.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const Listing = Object.assign({}, this.state);
-    this.props.processForm(Listing);
+  search() {
+    this.props.fetchResult(this.state.filter);
   }
 
-  update(field) {
-    return (e) => {
-      this.setState({
-        [field]: e.currentTarget.value,
-      });
-    };
+  update(e) {
+    this.setState({
+      filter: e.currentTarget.value,
+    });
+    this.search();
+  }
+  modal() {
+    debugger;
+    this.props.openModal("searchResults2");
   }
 
   render() {
     return (
-      <form className="search2" onSubmit={this.handleSubmit}>
-        <input
-          type="search"
-          className="search-bar2"
-          //   value="Shop for unique music gear..."
-          onChange={this.update("filter")}
-        />
-        <i className="fas fa-search fa-rotate-90" id="search-button2"></i>
-      </form>
+          <div className="search2">
+            <div className="search-bar-components2">
+              <input
+                type="search2"
+                className="search-bar2"
+                onChange={this.update}
+                onClick={() => this.modal()}
+              />
+              <i className="fas fa-search fa-rotate-90" id="search-button2"></i>
+            </div>
+            <Result />
+          </div>
     );
   }
 }

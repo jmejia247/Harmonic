@@ -1,15 +1,20 @@
 import { connect } from "react-redux";
 import SearchBar2 from "./searchBar2";
+import { fetch_search_results } from "../../actions/search_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mSTP = (state, ownProps) => {
   return {
     filter: Object.values(state.ui),
+    modal: state.ui.modal,
   };
 };
 
 const mDTP = (dispatch, ownProps) => {
   return {
-    processForm: (filter) => dispatch(fetchListings(filter)),
+    fetchResult: (query) => dispatch(fetch_search_results(query)),
+    openModal: (modal) => dispatch(openModal(modal)),
+    closeModal: () => dispatch(closeModal()),
   };
 };
 

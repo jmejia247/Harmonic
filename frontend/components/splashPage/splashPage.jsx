@@ -1,7 +1,7 @@
 import React from 'react';
 import StaffPicks from "../staffPicks/staffPicks_container";
 import DiscoverScroll from "../discoverScroll/discoverScroll_container";
-import SearchBar2 from "../searchBar/searchBar2_container";
+// import SearchBar2 from "../searchBar/searchBar2_container";
 import { Link } from "react-router-dom";
 
 
@@ -19,7 +19,7 @@ const splashPage = () => {
               everything they need to make music
             </h3>
             <h2 className="s2-heading">Find Your Dream Gear</h2>
-            <SearchBar2 />
+            {/* <SearchBar2 /> */}
             <h3 className="s2-rand">NEED INSPIRATION? TRY ONE OF THESE</h3>
             <section className="category-link">
               <Link to="/listings/10" className="cat-link">

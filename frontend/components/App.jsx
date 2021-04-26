@@ -11,12 +11,10 @@ import listingsContainer from './listings/listings_container';
 import SplashPage from "./splashPage/splashPage";
 import ListingItemContainer from './listings/listing_item_container';
 import CartContainer from '../components/cart/cart_container';
-// import SearchModal from '../components/modal/search_modal'
 
 const App = () => (
   <div>
     <Modal />
-    {/* <SearchModal /> */}
     <header id="main">
       <Link to="/" className="splash">
         <h1 id="logo">Harmonic</h1>
