@@ -16,14 +16,12 @@ class reviewForm extends React.Component {
     }
 
     handleSubmit(e) {
-      debugger
       e.preventDefault();
       const review = Object.assign({}, this.state);
       this.props.processForm(review).then(this.updates());
     }
 
     updates() {
-      debugger
       this.props.closeModal();
       
     }

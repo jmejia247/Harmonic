@@ -17,7 +17,6 @@ class Api::CartsController < ApplicationController
     end
     
     def destroy
-        # debugger
         @cart = Cart.where(user_id: current_user.id).where(listing_id: cart_params[:listing_id])
         if @cart
             @cart[0].destroy

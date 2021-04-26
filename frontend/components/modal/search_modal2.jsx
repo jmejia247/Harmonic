@@ -10,7 +10,6 @@ function SearchModal2({ modal, closeModal, openModal }) {
   let component;
   switch (modal) {
     case "searchResults2":
-      debugger;
       component = <SearchResultContainer />;
       break;
     default:
@@ -25,14 +24,12 @@ function SearchModal2({ modal, closeModal, openModal }) {
 }
 
 const mSTP = (state) => {
-  debugger;
   return {
     modal: state.ui.modal,
   };
 };
 
 const mDTP = (dispatch) => {
-  debugger;
   return {
     closeModal: () => dispatch(closeModal()),
     openModal: (modal) => dispatch(openModal(modal)),

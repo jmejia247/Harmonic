@@ -9,7 +9,6 @@ const sessionErrorsReducer = (state = [], action) => {
     let nextState = Object.assign([], state);
     switch (action.type) {
       case RECEIVE_ERRORS:
-        debugger
         return action.errors;
       case RECEIVE_CURRENT_USER:
         return [];

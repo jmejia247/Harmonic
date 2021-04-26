@@ -7,11 +7,8 @@ class SearchResults extends React.Component {
     }
 
     render() {
-        debugger
         const {results} = this.props;
-        debugger
         const result = results === null ? [] : Object.values(results);
-        debugger
         const mappedResults = result.length === 0 ? result : result.map((item) => {
             const post = `/listings/${item.id}`;
             return (

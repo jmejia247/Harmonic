@@ -7,7 +7,6 @@ class NavBar extends React.Component {
     };
 
     render() {
-      debugger
 
         const content = this.props.user ? (
           <section className='user-interface'>

@@ -2,7 +2,6 @@ import React from 'react'
 
 class updateReview extends React.Component {
     constructor(props) {
-        debugger
         super(props)
         this.state = {
           title: this.props.review.title,
@@ -17,7 +16,6 @@ class updateReview extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         const review = Object.assign({}, this.state);
         this.props.updateReview(review).then(this.props.closeModal);

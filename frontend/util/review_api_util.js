@@ -28,7 +28,6 @@ export const postReview = (review) => {
 }
 
 export const updateReview = (review) => {
-    debugger
     return $.ajax({
         method: "PATCH",
         url: `/api/listings/${review.listing_id}/reviews/${review.id}`,

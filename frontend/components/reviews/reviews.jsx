@@ -20,7 +20,6 @@ class Reviews extends React.Component {
         )
     }
     logic2(review) {
-        debugger
         if (this.props.user) {
             this.setState({
                 rev: review
@@ -32,7 +31,6 @@ class Reviews extends React.Component {
     }
 
     delete(id) {
-        debugger
         this.props.deleteReview(id);
     }
 
@@ -45,7 +43,6 @@ class Reviews extends React.Component {
         const mapped = rev.filter(review => review.listing_id === listing);
 
         const rv = mapped.map(review => {
-            debugger
             // <ReviewModal
             //   review={review}
             //   listing={this.props.listing}

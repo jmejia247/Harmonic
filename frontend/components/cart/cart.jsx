@@ -7,11 +7,8 @@ class Cart extends React.Component {
 
 
     render() {
-        debugger
-        console.log(this.props.carts)
         const mapped = []
         const item = this.props.carts.forEach((cart, index) => {
-            debugger
             const cartItem = this.props.listings[cart.listing_id];
             const remove = {id: index + 1, user_id: cart.user_id,listing_id: cart.listing_id}
             mapped.push(

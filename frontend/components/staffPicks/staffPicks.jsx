@@ -23,7 +23,6 @@ class StaffPicks extends React.Component {
     const listings = filteredPicks.map((listing) => {
       return <Listing key={listing.id} listing={listing} />;
     });
-    debugger;
     return (
       <section className="discover-section">
         <h1 className="discover-heading">Jose's Top Picks</h1>

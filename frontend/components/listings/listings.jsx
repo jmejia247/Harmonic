@@ -8,7 +8,6 @@ class Listing extends React.Component {
   }
 
   render() {
-    console.log(this.props.listing)
 
     if (!this.props.listing) {
       return null;

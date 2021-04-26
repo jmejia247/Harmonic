@@ -24,7 +24,6 @@ class SearchBar extends React.Component {
       this.search()
     }
     modal() {
-      debugger
       this.props.openModal("searchResults");
     }
 

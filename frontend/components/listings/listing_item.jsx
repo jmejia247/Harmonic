@@ -8,18 +8,14 @@ class ListingItem extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.requestListing(this.props.match.params.listingId);
         this.props.requestReviews();
     }
 
     addItem(id) {
-        debugger
         const {shopping} = this.props;
         const extract = shopping.map((item) => item.listing_id)
-        debugger
         if (this.props.user && !extract.includes(id)) {
-            debugger
             const item = { listing_id: this.props.listing.id, user_id: this.props.userId };
             this.props.cart(item);
         } else if (!this.props.user) {
@@ -28,7 +24,6 @@ class ListingItem extends React.Component {
     }
   
     render() {
-        // debugger
         const {listing} = this.props;
         if (!listing) {
             return null;

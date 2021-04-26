@@ -14,7 +14,6 @@ function ReviewModal({ modal, closeModal, openModal, listing, user, review }) {
       component = <ReviewFormContainer id={listing} userId={user}/>;
       break;
     case 'updateReview':
-      debugger
       component = <UpdateFormContainer review={review}/>;
       break;
     default:

@@ -2,13 +2,11 @@ class Api::ListingsController < ApplicationController
 
     def index 
         @listings = Listing.all.with_attached_photo
-        # debugger
         render :index
     end
 
     def show
         @listing = Listing.with_attached_photo.find(params[:id])
-        # debugger
         render :show
     end
 

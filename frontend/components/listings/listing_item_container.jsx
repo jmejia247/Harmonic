@@ -6,7 +6,6 @@ import { postCart } from '../../actions/cart_actions';
 import { openModal } from "../../actions/modal_actions";
 
 const mSTP = (state, ownProps) => {
-  debugger
   return {
     listing: state.entities.listings[ownProps.match.params.listingId],
     reviews: state.reviews,
@@ -17,7 +16,6 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = (dispatch, ownProps) => {
-  // debugger
   return {
     requestListing: (listingId) => dispatch(requestListing(listingId)),
     requestReviews: () => dispatch(requestReviews()),
