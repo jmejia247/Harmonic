@@ -549,6 +549,7 @@ table {
     font-weight: 300;
     color: lightgrey;
     padding-left: 10px;
+    background-color: whitesmoke;
 }
 .search-bar1:focus {
     outline: none;
@@ -563,14 +564,22 @@ table {
     box-shadow: none;
     height: 38px;
     width: 38px;
-    /* border-bottom-right-radius: 3px; */
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
+    background-color: white;
 }
 
 .search {
     display: flex;
+    flex-direction: column;
     margin-right: 125px;
+    z-index: 10;
+    position: relative;
+    min-height: 40px;
+}
+.search-bar-components {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -602,7 +611,6 @@ table {
     box-shadow: none;
     height: 51px;
     width: 51px;
-    /* border-bottom-right-radius: 3px; */
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     background-color: white;
@@ -613,6 +621,34 @@ table {
 .search2 {
     display: flex;
     margin-right: 125px;
+}
+
+.search-modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+}
+.search-modal-background-child {
+    position: absolute;
+    top: 18px;
+    left: 221px;
+}
+
+.search-modal-child {
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    min-height: 100px;
+    width: 840px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0px 50px rgba(0,0,0,0.2);
+    z-index: 10;
+    position: absolute;
+    top: 40px;
 }
 
 
@@ -1310,9 +1346,6 @@ table {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-bottom: 20px;
-}
-
-.cart-item-price {
 }
 
 .cart-item-purchase {
