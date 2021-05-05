@@ -20,7 +20,8 @@ listing1 = Listing.create!(
     brand: 'Gibson', 
     model: 'les Paul', 
     price: 4560, 
-    description: 'Vintage Gibson from the 80s for sale' 
+    description: 'Vintage Gibson from the 80s for sale',
+    category: 'guitar' 
 ) 
 
 file = File.open('app/assets/images/gibson.jpg')
@@ -35,7 +36,8 @@ listing2 = Listing.create!(
     brand: 'Fender', 
     model: 'stratocaster', 
     price: 2200, 
-    description: 'brand new strat for sale' 
+    description: 'brand new strat for sale',
+    category: 'guitar' 
 ) 
 
 file2 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/1975FenderStratocasterGilmour-6.jpg')
@@ -49,7 +51,8 @@ listing3 = Listing.create!(
     brand: 'PRS', 
     model: 'custom 24', 
     price: 3480, 
-    description: 'PRS from the early 2000s for sale' 
+    description: 'PRS from the early 2000s for sale',
+    category: 'guitar' 
 ) 
 
 file3 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/DSC06315_2-dPMgKYfs-scaled.jpg')
@@ -63,7 +66,8 @@ listing4 = Listing.create!(
     brand: 'ESP', 
     model: 'Eclipse II', 
     price: 2500, 
-    description: 'ESP Eclipse II FT for sale, hard to find!' 
+    description: 'ESP Eclipse II FT for sale, hard to find!',
+    category: 'guitar' 
 ) 
 
 file4 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/esp-eclipse-ii-distressed-e28093-beauty-shot.jpg')
@@ -77,7 +81,8 @@ listing5 = Listing.create!(
     brand: 'Strandberg', 
     model: 'Boden', 
     price: 2500, 
-    description: 'hard to find strandberg for sale!' 
+    description: 'hard to find strandberg for sale!',
+    category: 'guitar' 
 ) 
 
 file5 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/BodenOrginal.jpg')
@@ -89,7 +94,8 @@ listing6 = Listing.create!(
     brand: 'Strandberg', 
     model: 'Boden', 
     price: 3500, 
-    description: 'even harder to find strandberg bass for sale!' 
+    description: 'even harder to find strandberg bass for sale!' ,
+    category: 'bass' 
 ) 
 
 file6 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/strandbergbass.jpg')
@@ -101,7 +107,8 @@ listing7 = Listing.create!(
     brand: 'Ibanez', 
     model: 'SR400EQM', 
     price: 500, 
-    description: 'lovely ibanez bass, need to make room for next bass' 
+    description: 'lovely ibanez bass, need to make room for next bass',
+    category: 'bass' 
 ) 
 
 file7 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/ibanezbass.jpg')
@@ -113,7 +120,8 @@ listing8 = Listing.create!(
     brand: 'Fender', 
     model: 'american ultra', 
     price: 2500, 
-    description: 'new ultra series for bass, never opened. found a great deal on dream guitar' 
+    description: 'new ultra series for bass, never opened. found a great deal on dream guitar',
+    category: 'bass'  
 ) 
 
 file8 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/fender-american-ultra-precision-bass-mn-apl.jpg')
@@ -125,7 +133,8 @@ listing9 = Listing.create!(
     brand: 'Rickenbacker', 
     model: '4003s', 
     price: 17149, 
-    description: 'you can never go wrong with a timeless classic such as the household name of Rickenbacker. quality of the past present today!' 
+    description: 'you can never go wrong with a timeless classic such as the household name of Rickenbacker. quality of the past present today!',
+    category: 'bass' 
 ) 
 
 file9 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/rickenbackerbass.jpg')
@@ -137,7 +146,8 @@ listing10 = Listing.create!(
     brand: 'Shecter', 
     model: 'Stileto', 
     price: 699, 
-    description: 'unique design, workhorse, what more can i say?' 
+    description: 'unique design, workhorse, what more can i say?',
+    category: 'bass' 
 ) 
 
 file10 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/schecterbass.jpg')
@@ -151,7 +161,8 @@ listing11 = Listing.create!(
     brand: 'Alesis', 
     model: 'e drum', 
     price: 499, 
-    description: 'a must have for drummers looking to drum in silence for family members or apartments!' 
+    description: 'a must have for drummers looking to drum in silence for family members or apartments!',
+    category: 'drum' 
 ) 
 
 file11 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/alesisdrum.jpg')
@@ -165,7 +176,8 @@ listing12 = Listing.create!(
     brand: 'Pearl', 
     model: 'drum', 
     price: 350, 
-    description: 'nice beginner drum set, used by daughter. now she is on to a new drum set' 
+    description: 'nice beginner drum set, used by daughter. now she is on to a new drum set',
+    category: 'drum' 
 ) 
 
 file12 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/pearldrum.jpg')
@@ -179,7 +191,8 @@ listing13 = Listing.create!(
     brand: 'Yamaha', 
     model: 'drum', 
     price: 450, 
-    description: 'nice drum set left in apartment' 
+    description: 'nice drum set left in apartment',
+    category: 'drum' 
 ) 
 
 file13 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/yamahadrum.jpg')
@@ -192,7 +205,8 @@ listing14 = Listing.create!(
     brand: 'Meinl', 
     model: 'congas', 
     price: 350, 
-    description: 'meinl woodworks congas for sale, well taken care of' 
+    description: 'meinl woodworks congas for sale, well taken care of',
+    category: 'drum' 
 ) 
 
 file14 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/meinldrums.jpg')
@@ -205,7 +219,8 @@ listing15 = Listing.create!(
     brand: 'ludwig', 
     model: 'drum', 
     price: 600, 
-    description: 'looking to step up from that beginner set? look no further!' 
+    description: 'looking to step up from that beginner set? look no further!',
+    category: 'drum' 
 ) 
 
 file15 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/ludwigdrum.jpg')
@@ -219,7 +234,8 @@ listing16 = Listing.create!(
     brand: 'Hammond', 
     model: 'XK-1c portable organ', 
     price: 1565, 
-    description: 'all the sounds of an organ in a compact portable design' 
+    description: 'all the sounds of an organ in a compact portable design',
+    category: 'keyboard' 
 ) 
 
 file16 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/hammondorgan.jpg')
@@ -233,7 +249,8 @@ listing17 = Listing.create!(
     brand: 'Korg', 
     model: 'microKORG', 
     price: 429, 
-    description: 'well maintained synth for sale, all features working' 
+    description: 'well maintained synth for sale, all features working',
+    category: 'keyboard' 
 ) 
 
 file17 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/korgsynth.jpg')
@@ -247,7 +264,8 @@ listing = Listing.create!(
     brand: 'Moog', 
     model: 'theramin', 
     price: 349, 
-    description: 'if youve ever wondered if you should get a thermanin, the answer is yes' 
+    description: 'if youve ever wondered if you should get a thermanin, the answer is yes',
+    category: 'keyboard' 
 ) 
 
 file = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/moogtheramin.jpg')
@@ -261,7 +279,8 @@ listing = Listing.create!(
     brand: 'williams', 
     model: 'rhapsody 2', 
     price: 469, 
-    description: 'essential for anyone who wants to play piano but no space for a full size piano' 
+    description: 'essential for anyone who wants to play piano but no space for a full size piano',
+    category: 'keyboard' 
 ) 
 
 file = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/williams.jpg')
@@ -275,7 +294,8 @@ listing = Listing.create!(
     brand: 'Yamaha', 
     model: 'NP12 piagerro', 
     price: 350, 
-    description: 'speaks for itself, eveyone needs one of these to begin' 
+    description: 'speaks for itself, eveyone needs one of these to begin',
+    category: 'keyboard' 
 ) 
 
 file = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/yamahedigital.jpg')
