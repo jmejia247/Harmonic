@@ -50,7 +50,7 @@ class Cart extends React.Component {
           <div className="cart">
             <div className='cart-item-quant'>
               <i className="fas fa-shopping-cart" id="cart">
-                <h3>You have {this.props.carts.length} item(s) in your cart</h3>
+                <h3 className='shopping-cart-h3'>You have {this.props.carts.length} item(s) in your cart</h3>
               </i>
             </div>
             {mapped}

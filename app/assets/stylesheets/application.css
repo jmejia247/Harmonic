@@ -798,6 +798,7 @@ table {
 
 .search-link {
     text-decoration: none;
+    color: black;
 }
 .search-link:visited{
     text-decoration: none;
@@ -1240,6 +1241,13 @@ table {
 .cat-link {
     text-decoration: none;
     color: cornsilk;
+    border: 1px solid cornsilk;
+    border-radius: 3px;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -1383,6 +1391,7 @@ table {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 .bf-section1 i{
     font-size: xx-large;
@@ -1395,6 +1404,7 @@ table {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 .bf-section2 i{
     font-size: xx-large;
@@ -1533,6 +1543,16 @@ table {
 .cart-item-quant {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.fa-shopping-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.shopping-cart-h3 {
+    font-family: 'Roboto', sans-serif;
 }
 
 .cart-item-info {
