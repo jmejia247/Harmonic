@@ -1001,6 +1001,7 @@ table {
 .dropdown-info {
     display: flex;
     flex-direction: row;
+    
 }
 .small-div{
     padding-left: 5px;
