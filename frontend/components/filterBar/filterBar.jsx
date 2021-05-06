@@ -11,9 +11,9 @@ class FilterBar extends React.Component {
       <div className="filterbar">
         <div className="bar1">
           <h3 to="/" className="filter-navbar">
-             Find Guitars
+            Harmonics is a way of producing a safe environment for musicians to find the equipment they need to make the music they desire.
           </h3>
-          <h3 to="/" className="filter-navbar">
+          {/* <h3 to="/" className="filter-navbar">
             Pedals and Amplifiers
           </h3>
           <h3 to="/" className="filter-navbar">
@@ -30,7 +30,7 @@ class FilterBar extends React.Component {
           </h3>
           <h3 to="/" className="filter-navbar">
             and More
-          </h3>
+          </h3> */}
         </div>
         <div className="bar2">
           {/* <Link to='/' className='filter-navbar2'>Brands</Link>

@@ -53,7 +53,6 @@ const App = () => (
             href="https://github.com/galenddavis/whats_cooking"
             target="_blank"
             rel="noreferrer"
-            id="li1"
           >
             Github
           </a>
@@ -61,7 +60,6 @@ const App = () => (
             href="https://whats-cooking-programmers.herokuapp.com/#/"
             target="_blank"
             rel="noreferrer"
-            id="li1"
           >
             Live link
           </a>
@@ -117,7 +115,6 @@ const App = () => (
             href="https://github.com/jmejia247/BattleForYavin"
             target="_blank"
             rel="noreferrer"
-            id="li1"
           >
             Github
           </a>
@@ -125,7 +122,6 @@ const App = () => (
             href="https://jmejia247.github.io/BattleForYavin/"
             target="_blank"
             rel="noreferrer"
-            id="li1"
           >
             Live link
           </a>
