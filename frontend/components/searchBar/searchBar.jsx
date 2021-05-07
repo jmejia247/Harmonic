@@ -1,6 +1,7 @@
 import React from 'react';
 import { debounce } from "lodash";
 import SearchModal from '../modal/search_modal'
+import { Link, withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class SearchBar extends React.Component {
       };
       this.search = debounce(this.search.bind(this), 400);
       this.update = this.update.bind(this);
-      this.modal = this.modal.bind(this)
+      this.modal = this.modal.bind(this);
+      this.submit = this.submit.bind(this);
     };
     
     search() {
@@ -26,44 +28,50 @@ class SearchBar extends React.Component {
     modal() {
       this.props.openModal("searchResults");
     }
+    submit(e) {
+      e.preventDefault()
+      this.props.history.push('/checkout')
+    }
 
     render() {
         return (
-          <div
-            className={
-              this.props.modal === "searchResults"
-                ? "search-modal-background"
-                : "empty"
-            }
-            onClick={this.props.closeModal}
-          >
+          <form onSubmit={(e) => this.submit(e)}>
             <div
-              onClick={(e) => e.stopPropagation()}
               className={
                 this.props.modal === "searchResults"
-                  ? "search-modal-background-child"
+                  ? "search-modal-background"
                   : "empty"
               }
+              onClick={this.props.closeModal}
             >
-              <div className="search">
-                <div className="search-bar-components">
-                  <input
-                    type="search"
-                    className="search-bar1"
-                    onChange={this.update}
-                    onClick={() => this.modal()}
-                  />
-                  <i
-                    className="fas fa-search fa-rotate-90"
-                    id="search-button"
-                  ></i>
+              <div
+                onClick={(e) => e.stopPropagation()}
+                className={
+                  this.props.modal === "searchResults"
+                    ? "search-modal-background-child"
+                    : "empty"
+                }
+              >
+                <div className="search">
+                  <div className="search-bar-components">
+                    <input
+                      type="search"
+                      className="search-bar1"
+                      onChange={this.update}
+                      onClick={() => this.modal()}
+                    />
+                    <i
+                      className="fas fa-search fa-rotate-90"
+                      id="search-button"
+                    ></i>
+                  </div>
+                  <SearchModal />
                 </div>
-                <SearchModal />
               </div>
             </div>
-          </div>
+          </form>
         );
     }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

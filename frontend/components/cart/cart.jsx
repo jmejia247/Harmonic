@@ -1,8 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class Cart extends React.Component {
     constructor(props) {
         super(props)
+        this.deleteAll = this.deleteAll.bind(this)
+    }
+
+    deleteAll() {
+      if (this.props.carts.length > 0) {
+        this.props.carts.forEach((cart, index) => {
+          const remove = {id: index + 1, user_id: cart.user_id,listing_id: cart.listing_id}
+          this.props.delete(remove)
+        })
+      } else {
+        
+      }
     }
 
 
@@ -39,7 +52,6 @@ class Cart extends React.Component {
                     </section>
                     <section className='cart-item-checkout'>
                         <h3 className='cart-item-disclaimer'>Taxes and Fees calculated at checkout</h3>
-                        <button className='cart-item-checkout-button'>Proceed to Checkout</button>
                     </section>
                 </div>
               </div>
@@ -54,6 +66,11 @@ class Cart extends React.Component {
               </i>
             </div>
             {mapped}
+            <div className='cart-item-checkout-box'>
+              <Link to='/checkout'>
+                <button className={this.props.carts.length > 0 ? 'cart-item-checkout-button' : 'cart-item-checkout-button-none'} onClick={this.deleteAll}>Proceed to Checkout</button>
+              </Link>
+            </div>
           </div>
         );
     }

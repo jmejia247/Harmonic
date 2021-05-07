@@ -11,6 +11,7 @@ import listingsContainer from './listings/listings_container';
 import SplashPage from "./splashPage/splashPage";
 import ListingItemContainer from './listings/listing_item_container';
 import CartContainer from '../components/cart/cart_container';
+import CheckoutContainer from '../components/cart/checkout_container'
 
 const App = () => (
   <div>
@@ -27,6 +28,7 @@ const App = () => (
     </section>
     <Switch>
       <Route exact path="/" component={SplashPage} />
+      <Route exact path='/checkout' component={CheckoutContainer} />
       <Route
         exact
         path="/listings/:listingId"

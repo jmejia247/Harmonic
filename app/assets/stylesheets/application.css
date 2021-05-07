@@ -1532,6 +1532,25 @@ table {
     background-color: #52b052;
     background: #59b359;
 }
+.cart-item-checkout-button-none {
+    display: none;
+}
+.checkout-link {
+    color: #F6870F;
+    text-decoration: #F6870F;
+}
+.checkout-link:visited {
+    color: #F6870F;
+    text-decoration: #F6870F;
+}
+.cart-item-checkout-box {
+    height: 60px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid lightgray;
+}
 
 .cart-item-disclaimer {
     margin-right: 15px;
@@ -1574,5 +1593,21 @@ table {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkout-box {
+    display: flex;
+    margin-left: 400px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    height: 45px;
+    width: 600px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+.checkout-box-title {
     font-family: 'Roboto', sans-serif;
 }

@@ -17,7 +17,9 @@ class NavBar extends React.Component {
                 </i>
                 <div className="dropdown-content">
                   <h3 className='dropdown-title' >Hello {this.props.email}!</h3>
-                  <button className='dropdown-button' onClick={() => this.props.logout()}>Logout</button>
+                  <Link to='/'>
+                    <button className='dropdown-button' onClick={() => this.props.logout()}>Logout</button>
+                  </Link>
                 </div>
               </h3>
             </div>
