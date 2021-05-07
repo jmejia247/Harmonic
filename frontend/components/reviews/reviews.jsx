@@ -43,36 +43,35 @@ class Reviews extends React.Component {
         const mapped = rev.filter(review => review.listing_id === listing);
 
         const rv = mapped.map(review => {
-            // <ReviewModal
-            //   review={review}
-            //   listing={this.props.listing}
-            //   user={this.props.userId}
-            // />
             return (
               <div className="review">
                 <div className="title-review">
-                  <h3 className="review-map-title">{review.title} by</h3>
-                  <h3 className="review-map-name">{review.email}</h3>
-                  <button
-                    className={
-                      this.props.userId === review.author_id
-                        ? "review-map-user"
-                        : "review-map-no-user"
-                    }
-                    onClick={() => this.delete(review.id)}
-                  >
-                    Delete
-                  </button>
-                  <button
-                    className={
-                      this.props.userId === review.author_id
-                        ? "review-map-update"
-                        : "review-map-no-update"
-                    }
-                    onClick={() => this.logic2(review)}
-                  >
-                    Update
-                  </button>
+                  <div className='review-heading'>
+                    <h3 className="review-map-title">{review.title} by</h3>
+                    <h3 className="review-map-name">{review.email}</h3>
+                  </div>
+                  <div className='review-buttons'>
+                    <button
+                      className={
+                        this.props.userId === review.author_id
+                          ? "review-map-user"
+                          : "review-map-no-user"
+                      }
+                      onClick={() => this.delete(review.id)}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      className={
+                        this.props.userId === review.author_id
+                          ? "review-map-update"
+                          : "review-map-no-update"
+                      }
+                      onClick={() => this.logic2(review)}
+                    >
+                      Update
+                    </button>
+                  </div>
                 </div>
                 <h3 className="review-map-rating">{review.rating}</h3>
                 <p className="review-map-content">{review.content}</p>

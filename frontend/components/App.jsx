@@ -12,6 +12,7 @@ import SplashPage from "./splashPage/splashPage";
 import ListingItemContainer from './listings/listing_item_container';
 import CartContainer from '../components/cart/cart_container';
 import CheckoutContainer from '../components/cart/checkout_container'
+import ResultIndexContainer from '../components/SearchResults/result_index_container'
 
 const App = () => (
   <div>
@@ -29,6 +30,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={SplashPage} />
       <Route exact path='/checkout' component={CheckoutContainer} />
+      <Route exact path='/results' component={ResultIndexContainer} />
       <Route
         exact
         path="/listings/:listingId"

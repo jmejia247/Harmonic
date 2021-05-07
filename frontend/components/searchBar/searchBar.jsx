@@ -30,7 +30,8 @@ class SearchBar extends React.Component {
     }
     submit(e) {
       e.preventDefault()
-      this.props.history.push('/checkout')
+      this.props.history.push('/results')
+      this.props.closeModal()
     }
 
     render() {
