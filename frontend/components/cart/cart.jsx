@@ -20,10 +20,12 @@ class Cart extends React.Component {
 
 
     render() {
-        const mapped = []
+        const mapped = [];
+        let total = 0;
         const item = this.props.carts.forEach((cart, index) => {
             const cartItem = this.props.listings[cart.listing_id];
             const remove = {id: index + 1, user_id: cart.user_id,listing_id: cart.listing_id}
+            total += cartItem.price
             mapped.push(
               <div className="cart-item">
                 <img
@@ -67,6 +69,7 @@ class Cart extends React.Component {
             </div>
             {mapped}
             <div className='cart-item-checkout-box'>
+              <h3 className='cart-item-checkout-price'>Cart Total: ${total}</h3>
               <Link to='/checkout'>
                 <button className={this.props.carts.length > 0 ? 'cart-item-checkout-button' : 'cart-item-checkout-button-none'} onClick={this.deleteAll}>Proceed to Checkout</button>
               </Link>

@@ -1551,9 +1551,15 @@ table {
     height: 60px;
     width: 1000px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
     border-top: 1px solid lightgray;
+}
+
+.cart-item-checkout-price {
+    font-family: 'Roboto', sans-serif;
+    margin-right: 15px;
 }
 
 .cart-item-disclaimer {

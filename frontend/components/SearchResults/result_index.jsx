@@ -8,7 +8,6 @@ class ResultIndex extends React.Component {
 
     render() {
         const result = this.props.cartItems.map((cart) => {
-            console.log(cart, 'caaaaaart')
             const post = `/listings/${cart.id}`;
             return (
               <Link
@@ -36,7 +35,6 @@ class ResultIndex extends React.Component {
               </Link>
             );
         })
-        console.log(result, 'resulttttttt')
         return (
             <div className='result-index'>
                 {result}
