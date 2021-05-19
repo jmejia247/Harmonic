@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
                   <input
                     className="email"
                     type="email"
-                    value={this.state.email}
+                    defaultValue={this.state.email}
                     onChange={this.update("email")}
                     required
                   />
@@ -81,7 +81,7 @@ class SessionForm extends React.Component {
                   <input
                     className="password"
                     type="password"
-                    value={this.state.password}
+                    defaultValue={this.state.password}
                     onChange={this.update("password")}
                     required
                   />

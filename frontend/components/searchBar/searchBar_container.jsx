@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import SearchBar from './searchBar';
 import { fetch_search_results } from '../../actions/search_actions'
 import { openModal, closeModal } from '../../actions/modal_actions'
+import { removeSearchErrors } from '../../actions/search_actions'
 
 const mSTP = (state, ownProps) => {
     return {
@@ -15,6 +16,7 @@ const mDTP = (dispatch, ownProps) => {
       fetchResult: (query) => dispatch(fetch_search_results(query)),
       openModal: (modal) => dispatch(openModal(modal)),
       closeModal: () => dispatch(closeModal()),
+      removeSearchErrors: () => dispatch(removeSearchErrors())
     };
 };
 

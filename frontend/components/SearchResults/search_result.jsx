@@ -16,6 +16,7 @@ class SearchResults extends React.Component {
                 to={post}
                 className="search-link"
                 onClick={this.props.closeModal}
+                key={item.id}
               >
                 <div className="search-item">
                   <img

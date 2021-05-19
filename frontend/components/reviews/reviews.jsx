@@ -44,7 +44,7 @@ class Reviews extends React.Component {
 
         const rv = mapped.map(review => {
             return (
-              <div className="review">
+              <div className="review" key={review.id} >
                 <div className="title-review">
                   <div className='review-heading'>
                     <h3 className="review-map-title">{review.title} by</h3>

@@ -32,6 +32,7 @@ class SearchBar extends React.Component {
       e.preventDefault()
       this.props.history.push('/results')
       this.props.closeModal()
+      this.props.removeSearchErrors();
     }
 
     render() {

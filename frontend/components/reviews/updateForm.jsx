@@ -47,7 +47,7 @@ class updateReview extends React.Component {
                       min="1"
                       max="5"
                       className="review-input-label-rating"
-                      value={this.state.rating}
+                      defaultValue={this.state.rating}
                     />
                   </label>
                   <label className="review-label-3">
@@ -57,7 +57,7 @@ class updateReview extends React.Component {
                       type="text"
                       onChange={this.update("title")}
                       className="review-input-label"
-                      value={this.state.title}
+                      defaultValue={this.state.title}
                     />
                   </label>
                   <label className="review-label-4">
@@ -65,7 +65,7 @@ class updateReview extends React.Component {
                     <textarea
                       className="review-input-text"
                       onChange={this.update("content")}
-                      value={this.state.content}
+                      defaultValue={this.state.content}
                     />
                   </label>
                 </div>

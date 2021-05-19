@@ -13,6 +13,7 @@ class ResultIndex extends React.Component {
               <Link
                 to={post}
                 className="search-link"
+                key={cart.id}
               >
                 <div className="search-item">
                   <img
