@@ -881,8 +881,9 @@ table {
 }
 
 .listing img{
-    min-width: 218px;
+    width: 218px;
     height: 218px;
+    object-fit: scale-down;
 }
 
 
