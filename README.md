@@ -1,6 +1,6 @@
 # README
 
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%209.50.37%20AM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%209.50.37%20AM.png"></p>
 
 # <div align="center">Harmonic</div>
 
@@ -17,7 +17,7 @@ ___
   ### Demo User 
    Accessed through a modal, users can sign in with a demo user to navigate the site and access log in only features.
    
-   <p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%2010.33.46%20AM.png"> </p>
+   <p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-01-29%20at%2010.33.46%20AM.png"></p>
     
 ```javascript 
         return (
@@ -54,7 +54,7 @@ ___
   ### Search feature
   Search for the websites inventory of used gear to find that dream gear!
 
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.23.14%20PM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.23.14%20PM.png"></p>
 
 ```javascript
       return (
@@ -100,11 +100,11 @@ ___
   ### Listings and Reviews
   users can view listings and their reviews, as well as create, delete, update the reviews.
 
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.25.30%20PM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.25.30%20PM.png"></p>
 
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.25.05%20PM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.25.05%20PM.png"></p>
 
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.25.39%20PM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.25.39%20PM.png"></p>
 
 ```javascript
       return (
@@ -126,7 +126,7 @@ ___
   ### Shopping Cart
   Users can add that dream gear to their shopping cart and view them or remove them if they decide its not that dream gear they have been looking for :(
 
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.28.03%20PM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.28.03%20PM.png"></p>
 
 ```ruby
     def destroy
@@ -147,7 +147,7 @@ ___
   ### Listings
   a quick view of some listings on the site as well as some gear that deserves more attention
   
-<p align="center">  <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.28.58%20PM.png"> </p>
+<p align="center"> <img src="https://github.com/jmejia247/Photos/blob/main/Screen%20Shot%202021-04-26%20at%207.28.58%20PM.png"></p>
 
 ```javascript
     <div className="listing">
