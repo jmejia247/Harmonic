@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: Harmonic_production
   username: Harmonic
   password: <%= ENV['HARMONIC_DATABASE_PASSWORD'] %>

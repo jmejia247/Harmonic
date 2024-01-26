@@ -40,7 +40,7 @@ listing2 = Listing.create!(
     category: 'guitar' 
 ) 
 
-file2 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/1975FenderStratocasterGilmour-6.jpg')
+file2 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/1975FenderStratocasterGilmour-6.jpg')
 
 listing2.photo.attach(io: file2, filename: 'fender')
 
@@ -55,7 +55,7 @@ listing3 = Listing.create!(
     category: 'guitar' 
 ) 
 
-file3 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/DSC06315_2-dPMgKYfs-scaled.jpg')
+file3 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/DSC06315_2-dPMgKYfs-scaled.jpg')
 
 listing3.photo.attach(io: file3, filename: 'prs')
 
@@ -70,7 +70,7 @@ listing4 = Listing.create!(
     category: 'guitar' 
 ) 
 
-file4 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/esp-eclipse-ii-distressed-e28093-beauty-shot.jpg')
+file4 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/esp-eclipse-ii-distressed-e28093-beauty-shot.jpg')
 
 listing4.photo.attach(io: file4, filename: 'esp')
 
@@ -85,7 +85,7 @@ listing5 = Listing.create!(
     category: 'guitar' 
 ) 
 
-file5 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/BodenOrginal.jpg')
+file5 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/BodenOrginal.jpg')
 
 listing5.photo.attach(io: file5, filename: 'strandberg')
 
@@ -98,7 +98,7 @@ listing6 = Listing.create!(
     category: 'bass' 
 ) 
 
-file6 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/strandbergbass.jpg')
+file6 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/strandbergbass.jpg')
 
 listing6.photo.attach(io: file6, filename: 'strandberg')
 
@@ -111,7 +111,7 @@ listing7 = Listing.create!(
     category: 'bass' 
 ) 
 
-file7 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/ibanezbass.jpg')
+file7 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/ibanezbass.jpg')
 
 listing7.photo.attach(io: file7, filename: 'ibanez')
 
@@ -124,7 +124,7 @@ listing8 = Listing.create!(
     category: 'bass'  
 ) 
 
-file8 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/fender-american-ultra-precision-bass-mn-apl.jpg')
+file8 = File.open('app/assets/images/gibson.jpg') # URI.open('https://harmonic-aa-seed.s3.amazonaws.com/fender-american-ultra-precision-bass-mn-apl.jpg')
 
 listing8.photo.attach(io: file8, filename: 'fender')
 
@@ -137,7 +137,7 @@ listing9 = Listing.create!(
     category: 'bass' 
 ) 
 
-file9 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/rickenbackerbass.jpg')
+file9 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/rickenbackerbass.jpg')
 
 listing9.photo.attach(io: file9, filename: 'rickenbacker')
 
@@ -150,7 +150,7 @@ listing10 = Listing.create!(
     category: 'bass' 
 ) 
 
-file10 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/schecterbass.jpg')
+file10 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/schecterbass.jpg')
 
 listing10.photo.attach(io: file10, filename: 'schecter')
 
@@ -165,7 +165,7 @@ listing11 = Listing.create!(
     category: 'drum' 
 ) 
 
-file11 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/alesisdrum.jpg')
+file11 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/alesisdrum.jpg')
 
 listing11.photo.attach(io: file11, filename: 'alesis')
 
@@ -180,7 +180,7 @@ listing12 = Listing.create!(
     category: 'drum' 
 ) 
 
-file12 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/pearldrum.jpg')
+file12 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/pearldrum.jpg')
 
 listing12.photo.attach(io: file12, filename: 'pearl')
 
@@ -195,7 +195,7 @@ listing13 = Listing.create!(
     category: 'drum' 
 ) 
 
-file13 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/yamahadrum.jpg')
+file13 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/yamahadrum.jpg')
 
 listing13.photo.attach(io: file13, filename: 'yamaha')
 
@@ -209,7 +209,7 @@ listing14 = Listing.create!(
     category: 'drum' 
 ) 
 
-file14 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/meinldrums.jpg')
+file14 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/meinldrums.jpg')
 
 listing14.photo.attach(io: file14, filename: 'meinl')
 
@@ -223,7 +223,7 @@ listing15 = Listing.create!(
     category: 'drum' 
 ) 
 
-file15 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/ludwigdrum.jpg')
+file15 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/ludwigdrum.jpg')
 
 listing15.photo.attach(io: file15, filename: 'ludwig')
 
@@ -238,7 +238,7 @@ listing16 = Listing.create!(
     category: 'keyboard' 
 ) 
 
-file16 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/hammondorgan.jpg')
+file16 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/hammondorgan.jpg')
 
 listing16.photo.attach(io: file16, filename: 'hammond')
 
@@ -253,7 +253,7 @@ listing17 = Listing.create!(
     category: 'keyboard' 
 ) 
 
-file17 = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/korgsynth.jpg')
+file17 = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/korgsynth.jpg')
 
 listing17.photo.attach(io: file17, filename: 'korg')
 
@@ -268,7 +268,7 @@ listing = Listing.create!(
     category: 'keyboard' 
 ) 
 
-file = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/moogtheramin.jpg')
+file = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/moogtheramin.jpg')
 
 listing.photo.attach(io: file, filename: 'moog')
 
@@ -283,7 +283,7 @@ listing = Listing.create!(
     category: 'keyboard' 
 ) 
 
-file = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/williams.jpg')
+file = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/williams.jpg')
 
 listing.photo.attach(io: file, filename: 'williams')
 
@@ -298,7 +298,7 @@ listing = Listing.create!(
     category: 'keyboard' 
 ) 
 
-file = URI.open('https://harmonic-aa-seed.s3.amazonaws.com/yamahedigital.jpg')
+file = File.open('app/assets/images/gibson.jpg') #URI.open('https://harmonic-aa-seed.s3.amazonaws.com/yamahedigital.jpg')
 
 listing.photo.attach(io: file, filename: 'yamaha')
 
