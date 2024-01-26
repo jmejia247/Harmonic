@@ -5,6 +5,7 @@ class Cart extends React.Component {
     constructor(props) {
         super(props)
         this.deleteAll = this.deleteAll.bind(this)
+        // test
     }
 
     deleteAll() {
